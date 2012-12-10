@@ -1,5 +1,5 @@
 //
-//  RCSecondViewController.h
+//  RCFirstViewController.h
 //  ruby-china-for-ios
 //
 //  Created by Jason Lee on 12-12-10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCSecondViewController : UIViewController
+@interface RCTopicsViewController : UIViewController
 
 @end

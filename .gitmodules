@@ -1,0 +1,6 @@
+[submodule "NSRails"]
+	path = NSRails
+	url = git@github.com:dingbat/nsrails.git
+[submodule "Libraries/NSRails"]
+	path = Libraries/NSRails
+	url = git@github.com:dingbat/nsrails.git

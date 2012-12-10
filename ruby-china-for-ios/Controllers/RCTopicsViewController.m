@@ -6,13 +6,13 @@
 //  Copyright (c) 2012年 Ruby China. All rights reserved.
 //
 
-#import "RCFirstViewController.h"
+#import "RCTopicsViewController.h"
 
-@interface RCFirstViewController ()
+@interface RCTopicsViewController ()
 
 @end
 
-@implementation RCFirstViewController
+@implementation RCTopicsViewController
 
 - (void)viewDidLoad
 {

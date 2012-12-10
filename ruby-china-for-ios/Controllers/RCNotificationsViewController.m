@@ -6,13 +6,13 @@
 //  Copyright (c) 2012年 Ruby China. All rights reserved.
 //
 
-#import "RCSecondViewController.h"
+#import "RCNotificationsViewController.h"
 
-@interface RCSecondViewController ()
+@interface RCNotificationsViewController ()
 
 @end
 
-@implementation RCSecondViewController
+@implementation RCNotificationsViewController
 
 - (void)viewDidLoad
 {
