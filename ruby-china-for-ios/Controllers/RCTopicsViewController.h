@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCViewController.h"
 
-@interface RCTopicsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
-    IBOutlet UITableView *tableView;
+@interface RCTopicsViewController : RCViewController <UITableViewDataSource, UITableViewDelegate> {
     NSArray *topics;
 }
 

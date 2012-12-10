@@ -1,5 +1,5 @@
 //
-//  RCTopicCell.h
+//  RCTableView.h
 //  ruby-china-for-ios
 //
 //  Created by Jason Lee on 12-12-10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCTopicCell : UITableViewCell
+@interface RCTableView : UITableView
 
 @end

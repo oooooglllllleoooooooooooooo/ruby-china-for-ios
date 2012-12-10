@@ -1,14 +1,20 @@
 
 PODS:
-- JSONKit (1.5pre)
-- Reachability (3.0.0)
+- MBProgressHUD (0.5)
+- MHPrettyDate (1.0.1)
+- SDWebImage (3.0):
+  - SDWebImage/Main (= 3.0)
+- SDWebImage/Main (3.0)
 
 DEPENDENCIES:
-- JSONKit (~> 1.4)
-- Reachability (~> 3.0.0)
+- MBProgressHUD (~> 0.5)
+- MHPrettyDate (~> 1.0.1)
+- SDWebImage (~> 3.0)
 
 SPEC CHECKSUMS:
-  JSONKit: a01a22c75f27eae76b4badd55a91c20fe6e86477
-  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
+  MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
+  MHPrettyDate: 20779da456ad9c512a6a241929ac6cd53821794d
+  SDWebImage: afa3965bcb37797ba4ecac49393897b99d1b4be7
+  SDWebImage/Main: afa3965bcb37797ba4ecac49393897b99d1b4be7
 
 COCOAPODS: 0.16.0

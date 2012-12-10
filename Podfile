@@ -1,3 +1,4 @@
-platform :ios
-pod 'JSONKit', '~> 1.4'
-pod 'Reachability', '~> 3.0.0'
+platform :ios, "5.0"
+pod 'SDWebImage', '~> 3.0'
+pod 'MHPrettyDate', '~> 1.0.1'
+pod 'MBProgressHUD', '~> 0.5'

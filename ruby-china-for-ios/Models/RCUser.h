@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSMutableArray *topics, *notes, *replies, *notifications, *photos;
 @property (nonatomic, strong) NSString *login,*email, *name, *location,*company, *twitter, *bio, *website, *avatarUrl,*tagline;
-@property (nonatomic, strong) NSNumber *_Id;
 @property (nonatomic, assign) BOOL emailPublic;
+
+
++ (UIImage *) defaultAvatarImage;
 @end

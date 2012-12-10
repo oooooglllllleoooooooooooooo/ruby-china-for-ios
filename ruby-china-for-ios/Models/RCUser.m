@@ -14,6 +14,8 @@
 #import "RCPhoto.h"
 #import "RCNode.h"
 
+static UIImage *defaultAvatarImage;
+
 @implementation RCUser
 @synthesize topics, notes, replies, email, name, twitter, location, bio, website, avatarUrl, tagline, login;
 
@@ -29,6 +31,13 @@
         return [RCPhoto class];
 
     return [super nestedClassForProperty:property];
+}
+
++ (UIImage *) defaultAvatarImage {
+    if (!defaultAvatarImage) {
+        defaultAvatarImage = [UIImage imageNamed:@"default_avatar.png"];
+    }
+    return defaultAvatarImage;
 }
 
 

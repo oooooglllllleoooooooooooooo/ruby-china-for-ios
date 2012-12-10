@@ -13,7 +13,7 @@
 #import "RCReply.h"
 
 @implementation RCTopic
-@synthesize user, node, lastReplyUser, lastReply, replies, title, body, bodyHtml, repliesCount, repliedAt, createdAt, updatedAt;
+@synthesize user, node, lastReplyUserId, lastReplyUserLogin, replies, title, body, bodyHtml, repliesCount, repliedAt, createdAt, updatedAt, nodeId, nodeName;
 
 - (Class) nestedClassForProperty:(NSString *)property
 {
@@ -25,7 +25,7 @@
 
 - (BOOL) shouldOnlySendIDKeyForNestedObjectProperty:(NSString *)property
 {
-    return ([property isEqualToString:@"user"] || [property isEqualToString:@"node"] || [property isEqualToString:@"lastReplyUser"] || [property isEqualToString:@"lastReply"]);
+    return ([property isEqualToString:@"user"] || [property isEqualToString:@"node"]);
 }
 
 @end

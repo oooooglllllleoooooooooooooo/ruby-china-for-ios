@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCViewController.h"
 
-@interface RCNotificationsViewController : UIViewController
+@interface RCNotificationsViewController : RCViewController
 
 @end

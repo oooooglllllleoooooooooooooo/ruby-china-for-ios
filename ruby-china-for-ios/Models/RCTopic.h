@@ -14,12 +14,11 @@
 
 @interface RCTopic : RCRemoteObject
 
-@property (nonatomic, strong) RCUser *user, *lastReplyUser;
+@property (nonatomic, strong) RCUser *user;
 @property (nonatomic, strong) RCNode *node;
-@property (nonatomic, strong) RCReply *lastReply;
 @property (nonatomic, strong) NSMutableArray *replies;
-@property (nonatomic, strong) NSString *title, *body, *bodyHtml, *nodeName;
-@property (nonatomic, strong) NSNumber *repliesCount;
+@property (nonatomic, strong) NSString *title, *body, *bodyHtml, *nodeName, *lastReplyUserLogin;
+@property (nonatomic, strong) NSNumber *repliesCount, *lastReplyUserId, *nodeId;
 @property (nonatomic, strong) NSDate *repliedAt, *createdAt, *updatedAt;
 
 @end

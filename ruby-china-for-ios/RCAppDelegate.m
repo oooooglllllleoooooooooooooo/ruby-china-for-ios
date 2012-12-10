@@ -7,21 +7,23 @@
 //
 
 #import "RCAppDelegate.h"
+#import "RCViewController.h"
 #import "NSRConfig.h"
 #import "RCAll.h"
 
+#ifdef DEBUG
+#define kAPIURL @"http://127.0.0.1:3000/api/"
+#else
+#define kAPIURL @"http://ruby-china.org/api/"
+#endif
+
 @implementation RCAppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [NSRConfig defaultConfig].appURL = @"http://ruby-china.org/api/";
+    [NSRConfig defaultConfig].appURL = kAPIURL;
     return YES;
 }
 							
