@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96FF7F831675D41500ADC02E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F821675D41500ADC02E /* UIKit.framework */; };
+		96FF7F851675D41500ADC02E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F841675D41500ADC02E /* Foundation.framework */; };
+		96FF7F871675D41500ADC02E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F861675D41500ADC02E /* CoreGraphics.framework */; };
+		96FF7F8D1675D41500ADC02E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7F8B1675D41500ADC02E /* InfoPlist.strings */; };
+		96FF7F8F1675D41500ADC02E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF7F8E1675D41500ADC02E /* main.m */; };
+		96FF7F931675D41500ADC02E /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF7F921675D41500ADC02E /* RCAppDelegate.m */; };
+		96FF7F951675D41500ADC02E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7F941675D41500ADC02E /* Default.png */; };
+		96FF7F971675D41500ADC02E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7F961675D41500ADC02E /* Default@2x.png */; };
+		96FF7F991675D41500ADC02E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7F981675D41500ADC02E /* Default-568h@2x.png */; };
+		96FF7F9C1675D41500ADC02E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7F9A1675D41500ADC02E /* MainStoryboard.storyboard */; };
+		96FF7F9F1675D41500ADC02E /* RCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF7F9E1675D41500ADC02E /* RCFirstViewController.m */; };
+		96FF7FA11675D41500ADC02E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7FA01675D41500ADC02E /* first.png */; };
+		96FF7FA31675D41500ADC02E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7FA21675D41500ADC02E /* first@2x.png */; };
+		96FF7FA61675D41500ADC02E /* RCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF7FA51675D41500ADC02E /* RCSecondViewController.m */; };
+		96FF7FA81675D41500ADC02E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7FA71675D41500ADC02E /* second.png */; };
+		96FF7FAA1675D41500ADC02E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FF7FA91675D41500ADC02E /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96FF7F7E1675D41500ADC02E /* ruby-china-for-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ruby-china-for-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96FF7F821675D41500ADC02E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96FF7F841675D41500ADC02E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96FF7F861675D41500ADC02E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96FF7F8A1675D41500ADC02E /* ruby-china-for-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ruby-china-for-ios-Info.plist"; sourceTree = "<group>"; };
+		96FF7F8C1675D41500ADC02E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96FF7F8E1675D41500ADC02E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96FF7F901675D41500ADC02E /* ruby-china-for-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ruby-china-for-ios-Prefix.pch"; sourceTree = "<group>"; };
+		96FF7F911675D41500ADC02E /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
+		96FF7F921675D41500ADC02E /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
+		96FF7F941675D41500ADC02E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96FF7F961675D41500ADC02E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96FF7F981675D41500ADC02E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96FF7F9B1675D41500ADC02E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96FF7F9D1675D41500ADC02E /* RCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCFirstViewController.h; sourceTree = "<group>"; };
+		96FF7F9E1675D41500ADC02E /* RCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCFirstViewController.m; sourceTree = "<group>"; };
+		96FF7FA01675D41500ADC02E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		96FF7FA21675D41500ADC02E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		96FF7FA41675D41500ADC02E /* RCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSecondViewController.h; sourceTree = "<group>"; };
+		96FF7FA51675D41500ADC02E /* RCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSecondViewController.m; sourceTree = "<group>"; };
+		96FF7FA71675D41500ADC02E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		96FF7FA91675D41500ADC02E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96FF7F7B1675D41500ADC02E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FF7F831675D41500ADC02E /* UIKit.framework in Frameworks */,
+				96FF7F851675D41500ADC02E /* Foundation.framework in Frameworks */,
+				96FF7F871675D41500ADC02E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96FF7F731675D41500ADC02E = {
+			isa = PBXGroup;
+			children = (
+				96FF7F881675D41500ADC02E /* ruby-china-for-ios */,
+				96FF7F811675D41500ADC02E /* Frameworks */,
+				96FF7F7F1675D41500ADC02E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96FF7F7F1675D41500ADC02E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96FF7F7E1675D41500ADC02E /* ruby-china-for-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96FF7F811675D41500ADC02E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96FF7F821675D41500ADC02E /* UIKit.framework */,
+				96FF7F841675D41500ADC02E /* Foundation.framework */,
+				96FF7F861675D41500ADC02E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96FF7F881675D41500ADC02E /* ruby-china-for-ios */ = {
+			isa = PBXGroup;
+			children = (
+				96FF7F911675D41500ADC02E /* RCAppDelegate.h */,
+				96FF7F921675D41500ADC02E /* RCAppDelegate.m */,
+				96FF7F9A1675D41500ADC02E /* MainStoryboard.storyboard */,
+				96FF7F9D1675D41500ADC02E /* RCFirstViewController.h */,
+				96FF7F9E1675D41500ADC02E /* RCFirstViewController.m */,
+				96FF7FA01675D41500ADC02E /* first.png */,
+				96FF7FA21675D41500ADC02E /* first@2x.png */,
+				96FF7FA41675D41500ADC02E /* RCSecondViewController.h */,
+				96FF7FA51675D41500ADC02E /* RCSecondViewController.m */,
+				96FF7FA71675D41500ADC02E /* second.png */,
+				96FF7FA91675D41500ADC02E /* second@2x.png */,
+				96FF7F891675D41500ADC02E /* Supporting Files */,
+			);
+			path = "ruby-china-for-ios";
+			sourceTree = "<group>";
+		};
+		96FF7F891675D41500ADC02E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96FF7F8A1675D41500ADC02E /* ruby-china-for-ios-Info.plist */,
+				96FF7F8B1675D41500ADC02E /* InfoPlist.strings */,
+				96FF7F8E1675D41500ADC02E /* main.m */,
+				96FF7F901675D41500ADC02E /* ruby-china-for-ios-Prefix.pch */,
+				96FF7F941675D41500ADC02E /* Default.png */,
+				96FF7F961675D41500ADC02E /* Default@2x.png */,
+				96FF7F981675D41500ADC02E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96FF7F7D1675D41500ADC02E /* ruby-china-for-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96FF7FAD1675D41500ADC02E /* Build configuration list for PBXNativeTarget "ruby-china-for-ios" */;
+			buildPhases = (
+				96FF7F7A1675D41500ADC02E /* Sources */,
+				96FF7F7B1675D41500ADC02E /* Frameworks */,
+				96FF7F7C1675D41500ADC02E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ruby-china-for-ios";
+			productName = "ruby-china-for-ios";
+			productReference = 96FF7F7E1675D41500ADC02E /* ruby-china-for-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96FF7F751675D41500ADC02E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RC;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Ruby China";
+			};
+			buildConfigurationList = 96FF7F781675D41500ADC02E /* Build configuration list for PBXProject "ruby-china-for-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96FF7F731675D41500ADC02E;
+			productRefGroup = 96FF7F7F1675D41500ADC02E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96FF7F7D1675D41500ADC02E /* ruby-china-for-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96FF7F7C1675D41500ADC02E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FF7F8D1675D41500ADC02E /* InfoPlist.strings in Resources */,
+				96FF7F951675D41500ADC02E /* Default.png in Resources */,
+				96FF7F971675D41500ADC02E /* Default@2x.png in Resources */,
+				96FF7F991675D41500ADC02E /* Default-568h@2x.png in Resources */,
+				96FF7F9C1675D41500ADC02E /* MainStoryboard.storyboard in Resources */,
+				96FF7FA11675D41500ADC02E /* first.png in Resources */,
+				96FF7FA31675D41500ADC02E /* first@2x.png in Resources */,
+				96FF7FA81675D41500ADC02E /* second.png in Resources */,
+				96FF7FAA1675D41500ADC02E /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96FF7F7A1675D41500ADC02E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FF7F8F1675D41500ADC02E /* main.m in Sources */,
+				96FF7F931675D41500ADC02E /* RCAppDelegate.m in Sources */,
+				96FF7F9F1675D41500ADC02E /* RCFirstViewController.m in Sources */,
+				96FF7FA61675D41500ADC02E /* RCSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96FF7F8B1675D41500ADC02E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FF7F8C1675D41500ADC02E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96FF7F9A1675D41500ADC02E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FF7F9B1675D41500ADC02E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96FF7FAB1675D41500ADC02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96FF7FAC1675D41500ADC02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96FF7FAE1675D41500ADC02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ruby-china-for-ios/ruby-china-for-ios-Prefix.pch";
+				INFOPLIST_FILE = "ruby-china-for-ios/ruby-china-for-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96FF7FAF1675D41500ADC02E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ruby-china-for-ios/ruby-china-for-ios-Prefix.pch";
+				INFOPLIST_FILE = "ruby-china-for-ios/ruby-china-for-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96FF7F781675D41500ADC02E /* Build configuration list for PBXProject "ruby-china-for-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96FF7FAB1675D41500ADC02E /* Debug */,
+				96FF7FAC1675D41500ADC02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96FF7FAD1675D41500ADC02E /* Build configuration list for PBXNativeTarget "ruby-china-for-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96FF7FAE1675D41500ADC02E /* Debug */,
+				96FF7FAF1675D41500ADC02E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96FF7F751675D41500ADC02E /* Project object */;
+}
