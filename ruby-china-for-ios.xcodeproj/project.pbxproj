@@ -47,6 +47,7 @@
 		96FF81A91675E9F900ADC02E /* NSRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF81A21675E9F900ADC02E /* NSRRequest.m */; };
 		96FF81AE1675EDAF00ADC02E /* NSRRequest+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF81AD1675EDAF00ADC02E /* NSRRequest+Extend.m */; };
 		96FF81B41675EFA000ADC02E /* RCRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF81B31675EF9F00ADC02E /* RCRemoteObject.m */; };
+		96FF81B81675F6C700ADC02E /* RCTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FF81B71675F6C700ADC02E /* RCTopicCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,8 @@
 		96FF81AD1675EDAF00ADC02E /* NSRRequest+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRRequest+Extend.m"; sourceTree = "<group>"; };
 		96FF81B21675EF9F00ADC02E /* RCRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRemoteObject.h; sourceTree = "<group>"; };
 		96FF81B31675EF9F00ADC02E /* RCRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRemoteObject.m; sourceTree = "<group>"; };
+		96FF81B61675F6C700ADC02E /* RCTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopicCell.h; sourceTree = "<group>"; };
+		96FF81B71675F6C700ADC02E /* RCTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicCell.m; sourceTree = "<group>"; };
 		A11EBC22771341F6BCB6CEAB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -219,6 +222,7 @@
 		96FF7FD11675DADB00ADC02E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96FF81B51675F6B000ADC02E /* Components */,
 				96FF7FD21675DADB00ADC02E /* RCNotificationsViewController.h */,
 				96FF7FD31675DADB00ADC02E /* RCNotificationsViewController.m */,
 				96FF7FD41675DADB00ADC02E /* RCTopicsViewController.h */,
@@ -297,6 +301,15 @@
 				96FF81AD1675EDAF00ADC02E /* NSRRequest+Extend.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		96FF81B51675F6B000ADC02E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				96FF81B61675F6C700ADC02E /* RCTopicCell.h */,
+				96FF81B71675F6C700ADC02E /* RCTopicCell.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +429,7 @@
 				96FF81A91675E9F900ADC02E /* NSRRequest.m in Sources */,
 				96FF81AE1675EDAF00ADC02E /* NSRRequest+Extend.m in Sources */,
 				96FF81B41675EFA000ADC02E /* RCRemoteObject.m in Sources */,
+				96FF81B81675F6C700ADC02E /* RCTopicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

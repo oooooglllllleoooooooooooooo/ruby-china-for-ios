@@ -22,13 +22,6 @@
 {
     // Override point for customization after application launch.
     [NSRConfig defaultConfig].appURL = @"http://ruby-china.org/api/";
-    [RCTopic remoteObjectWithID:[NSNumber numberWithInt:7444] async:^(RCTopic *topic, NSError *error) {
-        NSLog(@"Topic title: %@", topic.title);
-        NSLog(@"Topic title: %@", topic.bodyHtml);
-        for (RCReply *reply in topic.replies) {
-            NSLog(@"Reply by: %@", reply.bodyHtml);
-        }
-    }];
     return YES;
 }
 							

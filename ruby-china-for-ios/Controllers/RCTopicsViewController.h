@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCTopicsViewController : UIViewController
+@interface RCTopicsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    IBOutlet UITableView *tableView;
+    NSArray *topics;
+}
+
+
+- (void) refresh;
 
 @end
