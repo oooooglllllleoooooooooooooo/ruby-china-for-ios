@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCTableView : UITableView
+@interface RCTableView : UITableView {
+    UIImage *bgImage;
+}
 
 @end

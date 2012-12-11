@@ -12,6 +12,15 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MHPrettyDate.h>
 
+#define kTitleTextColor [UIColor colorWithRed:0.3255 green:0.3294 blue:0.3373 alpha:1.0000]
+#define kTitleFontSize 14
+#define kSubTextColor [UIColor colorWithRed:0.8078 green:0.8118 blue:0.8196 alpha:1.0000]
+#define kSubTextFontSize 12
+
+#define kBackgrounImage [UIImage imageNamed:@"tableview_cell_bg.png"]
+#define kBorderTopImage [UIImage imageNamed:@"tableview_cell_border_top.png"]
+#define kBorderBottomImage [UIImage imageNamed:@"tableview_cell_border_bottom.png"]
+
 @implementation RCTopicTableViewCell
 
 - (id) initWithTopic: (RCTopic *) aTopic {
@@ -20,28 +29,30 @@
 
 - (id) initWithTopic: (RCTopic *) aTopic forDetail:(BOOL)isForDetail {
     self = [super initWithStyle:UITableViewCellSelectionStyleGray reuseIdentifier:[NSString stringWithFormat:@"topic-%d", [aTopic.remoteID intValue]]];
-    
+
     topic = aTopic;
     
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        
+//        self.backgroundColor = [UIColor whiteColor];
         
         avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 32, 32)];
         [avatarImageView setImageWithURL:[NSURL URLWithString:topic.user.avatarUrl] placeholderImage:[RCUser defaultAvatarImage]];
         [self addSubview:avatarImageView];
         
-        
         int titleWidth = self.frame.size.width - avatarImageView.frame.size.width - 30;
-        CGSize titleSize = [topic.title sizeWithFont:[UIFont systemFontOfSize:14]
+        CGSize titleSize = [topic.title sizeWithFont:[UIFont systemFontOfSize:kTitleFontSize]
                                    constrainedToSize:CGSizeMake(titleWidth, MAXFLOAT)
                                        lineBreakMode:NSLineBreakByWordWrapping];
         
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(avatarImageView.frame.size.width + avatarImageView.frame.origin.x + 10, avatarImageView.frame.origin.y - 2, titleWidth, MAX(18, MIN(36, titleSize.height)))];
+        titleLabel.backgroundColor = [UIColor clearColor];
         [titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
         titleLabel.textAlignment = NSTextAlignmentLeft;
         titleLabel.numberOfLines = 3;
         [titleLabel setText:topic.title];
-        [titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [titleLabel setFont:[UIFont systemFontOfSize:kTitleFontSize]];
+        [titleLabel setTextColor:kTitleTextColor];
         [self.contentView addSubview:titleLabel];
         
         
@@ -50,20 +61,23 @@
         
         infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x - 3, titleLabel.frame.size.height + titleLabel.frame.origin.y + 5, self.frame.size.width - 150, 14)];
         [infoLabel setText:info];
-        [infoLabel setFont:[UIFont systemFontOfSize:12]];
-        [infoLabel setTextColor:[UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0000]];
+        infoLabel.backgroundColor = [UIColor clearColor];
+        [infoLabel setFont:[UIFont systemFontOfSize:kSubTextFontSize]];
+        [infoLabel setTextColor:kSubTextColor];
         [self addSubview:infoLabel];
         
         counterLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, infoLabel.frame.origin.y, 90, 14)];
+        counterLabel.backgroundColor = [UIColor clearColor];
         [counterLabel setText:[NSString stringWithFormat:@"%d回复",[topic.repliesCount intValue]]];
-        [counterLabel setFont:[UIFont systemFontOfSize:12]];
+        [counterLabel setFont:[UIFont systemFontOfSize:kSubTextFontSize]];
         [counterLabel setTextAlignment:NSTextAlignmentRight];
-        [counterLabel setTextColor:[UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0000]];
+        [counterLabel setTextColor:kSubTextColor];
         [self addSubview:counterLabel];
         
         if (isForDetail) {
             bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x, infoLabel.frame.origin.y + 20, titleWidth, 14)];
             [bodyLabel setText:topic.bodyHtml];
+            bodyLabel.backgroundColor = [UIColor clearColor];
             bodyLabel.font = [UIFont systemFontOfSize:13];
             bodyLabel.numberOfLines = 10;
             [bodyLabel setLineBreakMode:NSLineBreakByWordWrapping];
@@ -74,5 +88,13 @@
     }
     return self;
 }
+
+- (void) drawRect:(CGRect)rect {
+    [kBorderTopImage drawInRect:CGRectMake(0, 0, self.frame.size.width, 1)];
+    [kBackgrounImage drawInRect:CGRectMake(0, 1, self.frame.size.width, self.frame.size.height - 2)];
+    [kBorderBottomImage drawInRect:CGRectMake(0, self.frame.size.height - 1, self.frame.size.width, 1)];
+    [super drawRect:rect];
+}
+
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCNavigationBar : UINavigationBar
+@interface RCNavigationBar : UINavigationBar {
+    UIImage *bgImage;
+}
 
 @end
