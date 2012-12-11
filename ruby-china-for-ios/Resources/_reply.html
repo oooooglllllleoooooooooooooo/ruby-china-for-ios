@@ -1,0 +1,14 @@
+<div class="reply" id="reply{{reply.id}}">
+    <div class="pull-left face"><a href="/{{reply.user_login}}"><img class="uface" src="{{reply.user_avatar_url}}" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/{{reply.user_login}}" data-name="">{{reply.user_login}}</a>
+          {{floor}}楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        {{reply.body_html}}
+      </div>
+    </div>
+</div>

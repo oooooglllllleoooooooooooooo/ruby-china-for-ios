@@ -24,6 +24,7 @@
 {
     // Override point for customization after application launch.
     [NSRConfig defaultConfig].appURL = kAPIURL;
+    [NSRConfig defaultConfig].dateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";;
     return YES;
 }
 							

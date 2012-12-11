@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="topic_detail.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta charset='utf-8' />
+</head>
+<body>
+
+<div id="main" class="container-fluid">      
+  <div class="content">
+    <div id="topic_show" class="topics box hfeed">
+      <div class="topic hentry">
+        <div class="infos">
+        <div class="pull-right avatar_large">
+          <a href="/{{user_login}}"><img class="uface" src="{{user_avatar_url}}" style="width:48px;height:48px;" /></a>
+        </div>
+        <h1 class="entry-title">{{title}}</h1>
+        <div class="info leader">
+          <a href="/topics/node{{node_id}}" class="node">{{node_name}}</a>
+          •
+          <a href="/{{user_login}}">{{user_login}}</a>
+          •
+          于<abbr class="timeago" title="{{created_at}}"></abbr>发布
+            •
+            最后由 <a href="/{{last_reply_user_login}}">{{last_reply_user_login}}</a> 于<abbr class="timeago" title="{{replied_at}}"></abbr>回复
+          •
+            {{hits}}次阅读
+        </div>
+      </div>
+
+      <div class="body entry-content" id="topic_body">
+        {{body_html}}
+      </div>
+    </div>
+  </div>
+
+  <div id="replies" class="box box_gray">
+    <div class="total">
+      共收到 <b>{{replies_count}}</b> 条回复
+    </div>
+    <div class="items">
+        {{replies_collection}}
+    </div>
+  </div>
+</div>
+</body>
+</html>

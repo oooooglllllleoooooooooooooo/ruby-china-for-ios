@@ -10,8 +10,9 @@
 
 @class RCTopic;
 
-@interface RCTopicViewController : RCViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface RCTopicViewController : RCViewController <UIWebViewDelegate>  {
     RCTopic *topic;
+    IBOutlet UIWebView *webView;
 }
 
 + (RCTopicViewController *) sharedInstance;

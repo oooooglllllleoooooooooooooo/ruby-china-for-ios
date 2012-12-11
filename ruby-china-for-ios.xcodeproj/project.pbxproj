@@ -31,6 +31,9 @@
 		96A4D0C91677282A000EAFAB /* RCNavLeftRightButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A4D0C81677282A000EAFAB /* RCNavLeftRightButtonItem.m */; };
 		96A4D0CC16772C7C000EAFAB /* nav_back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0CA16772C7C000EAFAB /* nav_back_icon.png */; };
 		96A4D0CD16772C7C000EAFAB /* nav_back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0CB16772C7C000EAFAB /* nav_back_icon@2x.png */; };
+		96A7992B167762B900F8A19E /* topic_detail.html in Resources */ = {isa = PBXBuildFile; fileRef = 96A7992A167762B900F8A19E /* topic_detail.html */; };
+		96A7992E167763D900F8A19E /* topic_detail.css in Resources */ = {isa = PBXBuildFile; fileRef = 96A7992D167763D900F8A19E /* topic_detail.css */; };
+		96A799301677709800F8A19E /* _reply.html in Resources */ = {isa = PBXBuildFile; fileRef = 96A7992F1677709800F8A19E /* _reply.html */; };
 		96EE8A3516760D1500DF5FE6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EE8A3416760D1500DF5FE6 /* CoreData.framework */; };
 		96FF7F831675D41500ADC02E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F821675D41500ADC02E /* UIKit.framework */; };
 		96FF7F851675D41500ADC02E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F841675D41500ADC02E /* Foundation.framework */; };
@@ -88,6 +91,9 @@
 		96A4D0C81677282A000EAFAB /* RCNavLeftRightButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNavLeftRightButtonItem.m; sourceTree = "<group>"; };
 		96A4D0CA16772C7C000EAFAB /* nav_back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_icon.png; sourceTree = "<group>"; };
 		96A4D0CB16772C7C000EAFAB /* nav_back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@2x.png"; sourceTree = "<group>"; };
+		96A7992A167762B900F8A19E /* topic_detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = topic_detail.html; sourceTree = "<group>"; };
+		96A7992D167763D900F8A19E /* topic_detail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = topic_detail.css; sourceTree = "<group>"; };
+		96A7992F1677709800F8A19E /* _reply.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = _reply.html; sourceTree = "<group>"; };
 		96EE8A3416760D1500DF5FE6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		96FF7F7E1675D41500ADC02E /* ruby-china-for-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ruby-china-for-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FF7F821675D41500ADC02E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -223,6 +229,9 @@
 				96943653167631E000F1E1A9 /* default_avatar.png */,
 				96943654167631E000F1E1A9 /* default_avatar@2x.png */,
 				96FF7FB21675D70200ADC02E /* icons */,
+				96A7992A167762B900F8A19E /* topic_detail.html */,
+				96A7992F1677709800F8A19E /* _reply.html */,
+				96A7992D167763D900F8A19E /* topic_detail.css */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -384,6 +393,9 @@
 				96A4D0C61677268A000EAFAB /* nav_setting_icon@2x.png in Resources */,
 				96A4D0CC16772C7C000EAFAB /* nav_back_icon.png in Resources */,
 				96A4D0CD16772C7C000EAFAB /* nav_back_icon@2x.png in Resources */,
+				96A7992B167762B900F8A19E /* topic_detail.html in Resources */,
+				96A7992E167763D900F8A19E /* topic_detail.css in Resources */,
+				96A799301677709800F8A19E /* _reply.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

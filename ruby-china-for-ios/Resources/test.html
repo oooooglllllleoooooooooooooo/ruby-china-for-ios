@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="topic_detail.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta charset='utf-8' />
+</head>
+<body>
+
+<div id="main" class="container-fluid">      
+  <div class="content">
+    <div id="topic_show" class="topics box hfeed">
+      <div class="topic hentry">
+        <div class="infos">
+        <div class="pull-right avatar_large">
+          <a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a>
+        </div>
+        <h1 class="entry-title">发起新的开源项目 - 19屋，招募贡献者</h1>
+        <div class="info leader">
+          <a href="/topics/node{{node_id}}" class="node">开源项目</a>
+          •
+          <a href="/saberma">saberma</a>
+          •
+          于<abbr class="timeago" title="{{created_at}}"></abbr>发布
+            •
+            最后由 <a href="/chankaward">chankaward</a> 于<abbr class="timeago" title="{{replied_at}}"></abbr>回复
+          •
+            次阅读
+        </div>
+      </div>
+
+      <div class="body entry-content" id="topic_body">
+        <p>项目地址：<a href="https://github.com/saberma/19wu" rel="nofollow" target="_blank">https://github.com/saberma/19wu</a></p>
+
+<p><strong>有同学反馈会担心技术不熟悉之类的，也不会有规定时间的限制，不用担心，只要想参与就行，甚至没有贡献代码，参与功能的讨论、代码质量的讨论也是很大的贡献。</strong></p>
+<h4>项目是做什么的？</h4>
+<p>有些线下活动（e.g.RubyConfChina）需要卖票，19wu 就是一个卖票的电子商务平台。</p>
+<h4>利用 ShopQi 也能卖票，为什么要重新做？</h4>
+<p><a href="http://github.com/saberma/shopqi">ShopQi</a> 是一个商品网上交易平台，而票务平台的购买流程会简单一些，但需要更多的细化功能，如生成电子票、签到等，重新开始一\344\270\252专门的项目比在 ShopQi 的基础上修改更合适一些。</p>
+<h4>已经有其他售票平台了，这个有什么差异的地方？</h4>
+<p>最主要差异是完全开源免费，另外可以提供代卖公司票的服务（提供发票并快递给顾客）。</p>
+<h4>为什么开源？</h4>
+<p>最好的产品是自己会去用的产品，最好的开源项目也是如此。比如说论坛，业务简单、容易理解，所以开源出来，大家可以边用边完善，可以提供很好的交流提升机会。</p>
+
+<p>而售票平台可以算是较简单的电子商务项目，容易上手，很适合开源出来，参与门槛也不高。</p>
+<h4>现在一点代码都没有？</h4>
+<p>是的，之前做 ShopQi 时，项目功能太多，后期不少朋友想要贡献代码非常困难。</p>
+
+<p>所以这个项目，我觉得可以不急着写代码，先推迟 2 周，欢迎大家参与，我将于 <strong>12月24日</strong> 开始开发，并持续利用业余时间进行完善。</p>
+<h4>免费的线下活动可以用这个吗？</h4>
+<p>可以的，只要把票价设置为0，就是免费活动了，通过 19wu 可以进行签到、统计等操作。</p>
+<h4>技术选型</h4>
+<ul>
+<li>Rails 3</li>
+<li>数据库使用 PostgreSQL</li>
+<li>后台任务使用 delayed_job，而不使用 resque，避免对 redis 的依赖</li>
+<li>前端基于 <a href="http://twitter.github.com/bootstrap">Bootstrap</a> 和 <a href="http://spinejs.com">Spine.js</a></li>
+</ul>
+<h4>初步计划</h4>
+<p>开发时会针对一个个小的功能点提出 issue，提交的代码要与相应 issue 关联。</p>
+<h4>Week #1</h4>
+<p>做出最小可用原型，不涉及支付流程等。</p>
+
+<ul>
+<li>主办方用户注册、发起免费活动</li>
+<li>普通用户报名参加</li>
+<li>主办方用户查看参与者用户列表</li>
+</ul>
+
+<p>域名备案通过即上线内部试用。</p>
+<h4>Week #2</h4>
+<p>加入签到功能，先只支持二三十人左右的小型会议，不涉及电子票码生成。</p>
+
+<ul>
+<li>参与\350\200\205用户到达会场后，由主办方用户直接勾选签到</li>
+</ul>
+<h4>Week #3</h4>
+<p>支持手机访问。</p>
+
+<ul>
+<li>参与者用户查看活动时间、地点</li>
+<li>参与者用户查看参与者列表（独立列表，带头像），对其他参与者有个基本了解。</li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="replies" class="box box_gray">
+    <div class="total">
+      共收到 <b>69</b> 条回复
+    </div>
+    <div class="items">
+        <div class="reply" id="reply71772">
+    <div class="pull-left face"><a href="/doitian"><img class="uface" src="http://ruby-china.org/avatar/17bca47a4961a24f82ef972aa9e1c986.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/doitian" data-name="">doitian</a>
+          1楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>+1</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72023">
+    <div class="pull-left face"><a href="/jefffreylam"><img class="uface" src="http://ruby-china.org/avatar/079bfe5a5017e88d63b771f9fc9bd4a0.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/jefffreylam" data-name="">jefffreylam</a>
+          2楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>+1</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71622">
+    <div class="pull-left face"><a href="/chenge"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/4215.gif" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/chenge" data-name="">chenge</a>
+          3楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支\346\214\201，这个名字的意思是？</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71624">
+    <div class="pull-left face"><a href="/Rei"><img class="uface" src="http://ruby-china.org/avatar/5aec84cd0b5479a0d1d89b6ffa2a9a20.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Rei" data-name="">Rei</a>
+          4楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>我已经在做自己的项目了，所以没有时间参与。挺期待这个服务上线。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71626">
+    <div class="pull-left face"><a href="/Crabby"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/1326.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Crabby" data-name="">Crabby</a>
+          5楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>顶一下，自己很想参与。担心自己是业余出身，没有软件开发经验与背景，很担心在规定的时间内无法完成既定的功能实现</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71631">
+    <div class="pull-left face"><a href="/paranoyang"><img class="uface" src="http://ruby-china.org/avatar/dc4578ea74f5ac1aa440075909db73f2.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/paranoyang" data-name="">paranoyang</a>
+          6楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>我挺有兴趣的，到时有时间的话一定参与做些力所能及的事</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71635">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          7楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/chenge" class="at_user" title="@chenge"><i>@</i>chenge</a> 这个名字是因为我手头上刚好有 <a href="http://www.19wu.com">www.19wu.com</a> 这个域名</p>
+
+<p><a href="/Rei" class="at_user" title="@Rei"><i>@</i>Rei</a> 回帖已经是很大支持，非常感谢</p>
+
+<p><a href="/Crabby" class="at_user" title="@Crabby"><i>@</i>Crabby</a> 我把你的顾虑写到主题顶上去了，不用担心，没那么严格，开源出来也是为了学习交流。</p>
+
+<p><a href="/paranoyang" class="at_user" title="@paranoyang"><i>@</i>paranoyang</a> 好的，谢谢。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71637">
+    <div class="pull-left face"><a href="/Crabby"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/1326.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Crabby" data-name="">Crabby</a>
+          8楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply5" class="at_floor" data-floor="5">#5楼</a> <a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 要是这样，我果断报名。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71639">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          9楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>原来 <a href="/Crabby" class="at_user" title="@Crabby"><i>@</i>Crabby</a> 你也在深圳。<br/>
+你在这里 <a href="https://github.com/saberma/19wu/issues/2" rel="nofollow" target="_blank">https://github.com/saberma/19wu/issues/2</a> 留名吧。这样以后可以在 github at 你。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71643">
+    <div class="pull-left face"><a href="/nowazhu"><img class="uface" src="http://ruby-china.org/avatar/ef75129dfae779c16c58b818cf8ec260.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/nowazhu" data-name="">nowazhu</a>
+          10楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>赞啊。有个\345\260\217疑问哦，为什么要避免对redis的依赖？</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71645">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          11楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/nowazhu" class="at_user" title="@nowazhu"><i>@</i>nowazhu</a> 主要想让开源项目依赖少一些，只依赖数据库的 <a href="https://github.com/collectiveidea/delayed_job">delayed_job</a> 可以满足要求的情况下，就不引入 基于 redis 的 resque 了，初学者会更容易上手。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71646">
+    <div class="pull-left face"><a href="/pzgz"><img class="uface" src="http://ruby-china.org/avatar/5894706ab8c4aa40257d022e28129f66.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/pzgz" data-name="">pzgz</a>
+          12楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>先报名了，有时间的话会来帮忙</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71647">
+    <div class="pull-left face"><a href="/huacnlee"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/huacnlee" data-name="">huacnlee</a>
+          13楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply9" class="at_floor" data-floor="9">#9楼</a> <a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 等 Rails 4 出的时候 delayed_job 也不用了</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71649">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          14楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/pzgz" class="at_user" title="@pzgz"><i>@</i>pzgz</a> 好的，在 github 上看到你了。</p>
+
+<p><a href="/huacnlee" class="at_user" title="@huacnlee"><i>@</i>huacnlee</a> 那样就更好了，期待。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71652">
+    <div class="pull-left face"><a href="/woaigithub"><img class="uface" src="http://ruby-china.org/avatar/d62d782bd0ed42394797cff8a9adae70.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/woaigithub" data-name="">woaigithub</a>
+          15楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>已经报名</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71653">
+    <div class="pull-left face"><a href="/nowazhu"><img class="uface" src="http://ruby-china.org/avatar/ef75129dfae779c16c58b818cf8ec260.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/nowazhu" data-name="">nowazhu</a>
+          16楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply9" class="at_floor" data-floor="9">#9楼</a> <a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 了解了，确实越简单越好</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71654">
+    <div class="pull-left face"><a href="/nowazhu"><img class="uface" src="http://ruby-china.org/avatar/ef75129dfae779c16c58b818cf8ec260.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/nowazhu" data-name="">nowazhu</a>
+          17楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply11" class="at_floor" data-floor="11">#11楼</a> <a href="/huacnlee" class="at_user" title="@huacnlee"><i>@</i>huacnlee</a> Rails 4 啥时候出来？</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71722">
+    <div class="pull-left face"><a href="/hayeah"><img class="uface" src="http://ruby-china.org/avatar/f0bef81280041011039a28a49e83c7dd.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/hayeah" data-name="">hayeah</a>
+          18楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>顶小马哥一个</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71669">
+    <div class="pull-left face"><a href="/Numbcoder"><img class="uface" src="http://ruby-china.org/avatar/71c79416396aba5c3b02f0eed41440da.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Numbcoder" data-name="">Numbcoder</a>
+          19楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>前端用 Spine.js， 是准备做成 Single Page App 么？</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71670">
+    <div class="pull-left face"><a href="/tumayun"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/967.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/tumayun" data-name="">tumayun</a>
+          20楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 对 Redis 依赖没有什么问题的，完全可以用 Resque<br/>
+貌似说最好用 win 7 开发？</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71671">
+    <div class="pull-left face"><a href="/leonkaiyu"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2873.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/leonkaiyu" data-name="">leonkaiyu</a>
+          21楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 新人，已掌握基本Rails(xdite的Rails 101水平)，并且有时间。不知可否分配一些简单任务？如果可以，我申请加入。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71672">
+    <div class="pull-left face"><a href="/alvin2ye"><img class="uface" src="http://ruby-china.org/avatar/dd9911c9c884c34f5afd10b46e459ef8.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/alvin2ye" data-name="">alvin2ye</a>
+          22楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>可以约定 代码不超过2000行 哈哈</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71673">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          23楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/Numbcoder" class="at_user" title="@Numbcoder"><i>@</i>Numbcoder</a> 不会完全做成 Single Page App，那样复杂性会增大很多。</p>
+
+<p><a href="/tumayun" class="at_user" title="@tumayun"><i>@</i>tumayun</a> 没有说最好用 win 7，哪个平台都可以的。</p>
+
+<p><a href="/leonkaiyu" class="at_user" title="@leonkaiyu"><i>@</i>leonkaiyu</a> 好的，开发时我会尽量将功能细分成小功能提交到 issue，你可以多点认领。</p>
+
+<p><a href="/alvin2ye" class="at_user" title="@alvin2ye"><i>@</i>alvin2ye</a> 哈哈，你提醒我了，已加到 readme，作为约定。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71674">
+    <div class="pull-left face"><a href="/leonkaiyu"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2873.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/leonkaiyu" data-name="">leonkaiyu</a>
+          24楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 没问题。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71675">
+    <div class="pull-left face"><a href="/hsiss"><img class="uface" src="http://ruby-china.org/avatar/b7c664636f2ebddb50ea519cc6abe068.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/hsiss" data-name="">hsiss</a>
+          25楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>建议先把主体业务框架整理出来,最小原型中规划留下扩展空间<br/>
+例如: 有哪些角色(主办方,参与者,游客,管理员),主办方是否需要一个组织的概念以便多人管理<br/>
+主办方发起活动,参与者报名,签到以及之后的评价<br/>
+参与者报名包括 申请报名,支付,报名成功发放电子活动券</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71681">
+    <div class="pull-left face"><a href="/Tony612"><img class="uface" src="http://ruby-china.org/avatar/dc717fb8a7638b9e5513ecc0b82a1b5b.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Tony612" data-name="">Tony612</a>
+          26楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>挺想参加的，但没用过spine\345\222\214backbone，不知道会不会有影响，不过保持关注，能的话就贡献一份自己的力量</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71684">
+    <div class="pull-left face"><a href="/small_fish__"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2973.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/small_fish__" data-name="">small_fish__</a>
+          27楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>关注并希望参与…</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71692">
+    <div class="pull-left face"><a href="/sparkrico"><img class="uface" src="http://ruby-china.org/avatar/cd64aad7fcdcdbd7668028ee7fb72dc0.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/sparkrico" data-name="">sparkrico</a>
+          28楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>作为新手，我是来支持和学习的：）</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71702">
+    <div class="pull-left face"><a href="/neverlandxy_naix"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2019.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/neverlandxy_naix" data-name="">neverlandxy_naix</a>
+          29楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>关注</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71706">
+    <div class="pull-left face"><a href="/shooter"><img class="uface" src="http://ruby-china.org/avatar/3c885bb99d5030543e814f46fa3d398e.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/shooter" data-name="">shooter</a>
+          30楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>接触rails差不多有一年了 但基本是自己摸索 交流不多  希望能跟各位大大多多提高一下 ^_^</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71729">
+    <div class="pull-left face"><a href="/menghuanwd"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/3807.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/menghuanwd" data-name="">menghuanwd</a>
+          31楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>半年经验新手也想贡献点，有什么可以效劳的吗</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71739">
+    <div class="pull-left face"><a href="/crow0007"><img class="uface" src="http://ruby-china.org/avatar/675d33db1408649ee3fe3698fcb93b27.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/crow0007" data-name="">crow0007</a>
+          32楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>我也想参与</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71750">
+    <div class="pull-left face"><a href="/xautjzd"><img class="uface" src="http://ruby-china.org/avatar/2e710318eddcea0549aae4369f4bc0f6.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/xautjzd" data-name="">xautjzd</a>
+          33楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>才刚开始学ruby，精神支持一下，以后再参与</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71771">
+    <div class="pull-left face"><a href="/blueplanet"><img class="uface" src="http://ruby-china.org/avatar/c4d5933fed71c9f163b9ec2bed839eaf.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/blueplanet" data-name="">blueplanet</a>
+          34楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>Rails入门级别。目前在自己写一个简单的读书记录网站。<br/>
+前端的JS和CSS非常不熟。</p>
+
+<p>可以的话，申请加入。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71782">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          35楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/hsiss" class="at_user" title="@hsiss"><i>@</i>hsiss</a> 你说的对，迟点我们在 issue 上讨论一下具体的业务。</p>
+
+<p><a href="/Tony612" class="at_user" title="@Tony612"><i>@</i>Tony612</a> 没用过 spine 和 backbone 也可以参加的。</p>
+
+<p><a href="/Tony612" class="at_user" title="@Tony612"><i>@</i>Tony612</a>  <a href="/small" class="at_user" title="@small"><i>@</i>small</a><em>fish</em>_  <a href="/shooter" class="at_user" title="@shooter"><i>@</i>shooter</a> <a href="/menghuanwd" class="at_user" title="@menghuanwd"><i>@</i>menghuanwd</a> <a href="/blueplanet" class="at_user" title="@blueplanet"><i>@</i>blueplanet</a> 欢迎，请回复一下 github <a href="https://github.com/saberma/19wu/issues/2">报名贴</a> ，方便以后在 github 上的协作</p>
+
+<p><a href="/sparkrico" class="at_user" title="@sparkrico"><i>@</i>sparkrico</a> <a href="/crow0007" class="at_user" title="@crow0007"><i>@</i>crow0007</a> <a href="/neverlandxy_naix" class="at_user" title="@neverlandxy_naix"><i>@</i>neverlandxy_naix</a> 看到你们了，欢迎加入。</p>
+
+<p><a href="/xautjzd" class="at_user" title="@xautjzd"><i>@</i>xautjzd</a>  <a href="/hayeah" class="at_user" title="@hayeah"><i>@</i>hayeah</a>  <a href="/doitian" class="at_user" title="@doitian"><i>@</i>doitian</a> 非常感谢。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71787">
+    <div class="pull-left face"><a href="/alan_hjkl"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/3149.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/alan_hjkl" data-name="">alan_hjkl</a>
+          36楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>2年java web开发经验。  前端后端均可<br/>
+这个是重头开始做的吧， rails 开发基础为0.<br/>
+决定用2周时间把笨方法學 Ruby和将web敏捷开发上的例子练习完。<br/>
+希望能在24日前赶上。<br/>
+想学些敏捷开发方面的知识，大牛拉我一把吧</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71788">
+    <div class="pull-left face"><a href="/Desert"><img class="uface" src="http://ruby-china.org/avatar/25dfe17a059113e45c7aec7909c07544.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Desert" data-name="">Desert</a>
+          37楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>报名加入</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71791">
+    <div class="pull-left face"><a href="/ikbear"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/191.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/ikbear" data-name="">ikbear</a>
+          38楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71816">
+    <div class="pull-left face"><a href="/ghjcumt2008"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/4789.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/ghjcumt2008" data-name="">ghjcumt2008</a>
+          39楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>java转rails，学习中，已报名</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71817">
+    <div class="pull-left face"><a href="/xjz19901211"><img class="uface" src="http://ruby-china.org/avatar/476b73a957eaddd15ca12cefd52b198a.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/xjz19901211" data-name="">xjz19901211</a>
+          40楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>来打酱油。。。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71834">
+    <div class="pull-left face"><a href="/bony"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/22.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/bony" data-name="">bony</a>
+          41楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>关注一下。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71835">
+    <div class="pull-left face"><a href="/beenhero"><img class="uface" src="http://ruby-china.org/avatar/e7ac2850f5cfb29baaf97625c7bd590c.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/beenhero" data-name="">beenhero</a>
+          42楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 不错的细分, 从零开始开源的好处, 由群氓决定它的形状.<br/>
+不过看了你的开发计划, 感觉每周的进度有点快了, 别给太多期望值, 少给点, 超出它, 那么是种愉悦的激励.</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71951">
+    <div class="pull-left face"><a href="/lgn21st"><img class="uface" src="http://l.ruby-china.org/user/normal_f08750e605d58ff54872d955169ce0c3.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/lgn21st" data-name="">lgn21st</a>
+          43楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 有没有办法提前约个时间，语音也好，聊天室也好，约一下大家在线讨论，确定核心开发者，然后主要是听听大家对这个项目的想法，意见，以及一起分析一下这个产品针对的问题，痛点。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71960">
+    <div class="pull-left face"><a href="/tumayun"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/967.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/tumayun" data-name="">tumayun</a>
+          44楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/lgn21st" class="at_user" title="@lgn21st"><i>@</i>lgn21st</a> 对，这个在公司立项会议</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71962">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          45楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/lgn21st" class="at_user" title="@lgn21st"><i>@</i>lgn21st</a> 周三（12月12日）晚上怎么样？聊天室好点，有文字记录，不知道 github 版聊的即时性如何。 <a href="/lyfi2003" class="at_user" title="@lyfi2003"><i>@</i>lyfi2003</a></p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71965">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          46楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/alan_hjkl" class="at_user" title="@alan_hjkl"><i>@</i>alan_hjkl</a> <a href="/ghjcumt2008" class="at_user" title="@ghjcumt2008"><i>@</i>ghjcumt2008</a> 很希望有更多的 java 程序员通知这个项目来了解 ruby。</p>
+
+<p><a href="/Desert" class="at_user" title="@Desert"><i>@</i>Desert</a> <a href="/alan_hjkl" class="at_user" title="@alan_hjkl"><i>@</i>alan_hjkl</a>  <a href="/ghjcumt2008" class="at_user" title="@ghjcumt2008"><i>@</i>ghjcumt2008</a> 请在 github <a href="https://github.com/saberma/19wu/issues/2">报名贴</a> 留名。</p>
+
+<p><a href="/ikbear" class="at_user" title="@ikbear"><i>@</i>ikbear</a> <a href="/xjz19901211" class="at_user" title="@xjz19901211"><i>@</i>xjz19901211</a> <a href="/bony" class="at_user" title="@bony"><i>@</i>bony</a> <a href="/tumayun" class="at_user" title="@tumayun"><i>@</i>tumayun</a> 非常感谢。</p>
+
+<p><a href="/beenhero" class="at_user" title="@beenhero"><i>@</i>beenhero</a> 现在我也觉得有点快，还是慢一点好，大家可以有更多的时间讨论，分工。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71966">
+    <div class="pull-left face"><a href="/lgn21st"><img class="uface" src="http://l.ruby-china.org/user/normal_f08750e605d58ff54872d955169ce0c3.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/lgn21st" data-name="">lgn21st</a>
+          47楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply45" class="at_floor" data-floor="45">#45楼</a> <a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 额，后天越好了跟另外一个Daniel去录制<a href="http://railscasts-china.com/episodes/two-daniel-pair-live-show">Game of life</a>的下集，冲突了。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71967">
+    <div class="pull-left face"><a href="/tumayun"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/967.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/tumayun" data-name="">tumayun</a>
+          48楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 使用主流的 Gem，Ruby 还有 Rails 版本都用最新的，随时准备升级到 Rails 4 和 Ruby 2.0</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71969">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          49楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/lgn21st" class="at_user" title="@lgn21st"><i>@</i>lgn21st</a> 主要看你 和 <a href="/lyfi2003" class="at_user" title="@lyfi2003"><i>@</i>lyfi2003</a> 什么时候方便？</p>
+
+<p><a href="/tumayun" class="at_user" title="@tumayun"><i>@</i>tumayun</a> rails3可以用最新的，至于rails4，还是等 rails4.1 出来\346\227\266再升级合适点。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71970">
+    <div class="pull-left face"><a href="/lgn21st"><img class="uface" src="http://l.ruby-china.org/user/normal_f08750e605d58ff54872d955169ce0c3.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/lgn21st" data-name="">lgn21st</a>
+          50楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="#reply49" class="at_floor" data-floor="49">#49楼</a> <a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 只要顺延一天我就OK :-)</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71988">
+    <div class="pull-left face"><a href="/Yujing_Z"><img class="uface" src="http://ruby-china.org/avatar/b3041e5120710b3a5859f5af5c6d9ba2.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Yujing_Z" data-name="">Yujing_Z</a>
+          51楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>Spine不熟。。要是Backbone就好了</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply71997">
+    <div class="pull-left face"><a href="/keating"><img class="uface" src="http://ruby-china.org/avatar/28acad03123677d9f05be8d46742e6ee.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/keating" data-name="">keating</a>
+          52楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>Very happy, 未接触过Spine, Backbone, 很想在实际项目中用一下, 已报名:)</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72172">
+    <div class="pull-left face"><a href="/jjzxcc"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2492.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/jjzxcc" data-name="">jjzxcc</a>
+          53楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>菜鸟一枚，已报名。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72030">
+    <div class="pull-left face"><a href="/rfei"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/4027.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/rfei" data-name="">rfei</a>
+          54楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>我也报名，学习加实践，也希望能贡献出自己的代码。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72032">
+    <div class="pull-left face"><a href="/huyong36"><img class="uface" src="http://ruby-china.org/avatar/a40332d7d2acf6d5d6af15b364b1de90.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/huyong36" data-name="">huyong36</a>
+          55楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>报名了。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72041">
+    <div class="pull-left face"><a href="/welkang"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/4600.png" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/welkang" data-name="">welkang</a>
+          56楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>持续关注，前端一枚，看能贡献几行代码否，哈哈~~</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72044">
+    <div class="pull-left face"><a href="/ghosTM55"><img class="uface" src="http://ruby-china.org/avatar/fffe2a3639386034aedb0cea61ebb5fa.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/ghosTM55" data-name="">ghosTM55</a>
+          57楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>项目也放到GitCafe上来吧 :)</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72062">
+    <div class="pull-left face"><a href="/hegwin"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/1466.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/hegwin" data-name="">hegwin</a>
+          58楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>报个名，只是从来没参与过开源项目，不知道怎样开始呢……</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72071">
+    <div class="pull-left face"><a href="/sanivbyfish"><img class="uface" src="http://ruby-china.org/avatar/ea7613ac0b30a805f357b42bd2e1923c.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/sanivbyfish" data-name="">sanivbyfish</a>
+          59楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持一下</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72088">
+    <div class="pull-left face"><a href="/wlon"><img class="uface" src="http://ruby-china.org/avatar/e908208476b09fd18007609e62ff859d.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/wlon" data-name="">wlon</a>
+          60楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>这给得支持</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72099">
+    <div class="pull-left face"><a href="/rasefon"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/2466.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/rasefon" data-name="">rasefon</a>
+          61楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持，如果需要乐意贡献代码。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72136">
+    <div class="pull-left face"><a href="/golden05"><img class="uface" src="http://ruby-china.org/avatar/cab9233b3fcc322f4362559ca89b4be1.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/golden05" data-name="">golden05</a>
+          62楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持 </p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72158">
+    <div class="pull-left face"><a href="/magina"><img class="uface" src="http://ruby-china.org/avatar/2c3efcd119ef681c9f2989b26dc9a9d2.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/magina" data-name="">magina</a>
+          63楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持，菜鸟一枚，时间比较充裕，希望可以打个杂</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72175">
+    <div class="pull-left face"><a href="/Azon"><img class="uface" src="http://ruby-china.org/avatar/ca087d20dcf8cb24426c3e816adcdda7.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/Azon" data-name="">Azon</a>
+          64楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>报名，以前没参与过开源项目。通过这个项目增长点经验</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72187">
+    <div class="pull-left face"><a href="/caiwangqin"><img class="uface" src="http://ruby-china.org/avatar/15bf61332913bfe999465ca290370304.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/caiwangqin" data-name="">caiwangqin</a>
+          65楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/saberma" class="at_user" title="@saberma"><i>@</i>saberma</a> 争取下次 szRubyist meetup的时候可以用来签到。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72234">
+    <div class="pull-left face"><a href="/chankaward"><img class="uface" src="http://l.ruby-china.org/user/normal_avatar/3872.jpg" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/chankaward" data-name="">chankaward</a>
+          66楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p>支持！</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72229">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          67楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/lgn21st" class="at_user" title="@lgn21st"><i>@</i>lgn21st</a> 好的，那就周四晚9点，我到时先提前在 github 发 issue，在上面讨论可以记录下来。</p>
+      </div>
+    </div>
+</div>
+<div class="reply" id="reply72230">
+    <div class="pull-left face"><a href="/saberma"><img class="uface" src="http://ruby-china.org/avatar/871c4ba6d25169779cee977e04b2f0c3.png?s=48" style="width:48px;height:48px;" /></a></div>
+    <div class="infos">
+      <div class="info">
+        <span class="name">
+          <a href="/saberma" data-name="">saberma</a>
+          68楼, <abbr class="timeago" title="{{reply.created_at}}"></abbr>
+        </span>
+      </div>
+      <div class="body">
+        <p><a href="/Yujing_Z" class="at_user" title="@Yujing_Z"><i>@</i>Yujing_Z</a> Backbone 之前一直在用，后面在小项目中使用 Spine，感觉更好用。</p>
+
+<p><a href="/keating" class="at_user" title="@keating"><i>@</i>keating</a> <a href="/jefffreylam" class="at_user" title="@jefffreylam"><i>@</i>jefffreylam</a> <a href="/rfei" class="at_user" title="@rfei"><i>@</i>rfei</a> <a href="/huyong36" class="at_user" title="@huyong36"><i>@</i>huyong36</a> <a href="/hegwin" class="at_user" title="@hegwin"><i>@</i>hegwin</a> <a href="/rasefon" class="at_user" title="@rasefon"><i>@</i>rasefon</a> <a href="/jjzxcc" class="at_user" title="@jjzxcc"><i>@</i>jjzxcc</a> <a href="/Azon" class="at_user" title="@Azon"><i>@</i>Azon</a>  看到你们了，欢迎。</p>
+
+<p><a href="/welkang" class="at_user" title="@welkang"><i>@</i>welkang</a> <a href="/magina" class="at_user" title="@magina"><i>@</i>magina</a>  欢迎，请回复一下 github <a href="https://github.com/saberma/19wu/issues/2">报名贴</a> ，方便以后在 github 上的协作。</p>
+
+<p><a href="/ghosTM55" class="at_user" title="@ghosTM55"><i>@</i>ghosTM55</a> ok，已创建项目，稍后同步过去。</p>
+
+<p><a href="/hegwin" class="at_user" title="@hegwin"><i>@</i>hegwin</a> 稍后会编写一些指南引导新手开始。</p>
+
+<p><a href="/sanivbyfish" class="at_user" title="@sanivbyfish"><i>@</i>sanivbyfish</a> <a href="/wlon" class="at_user" title="@wlon"><i>@</i>wlon</a> <a href="/golden05" class="at_user" title="@golden05"><i>@</i>golden05</a>  非常感谢。</p>
+
+<p><a href="/caiwangqin" class="at_user" title="@caiwangqin"><i>@</i>caiwangqin</a> 下次应该是一个月后吧，到时基本功能应该有了。19wu.com 的域名也已经提交备案了。</p>
+      </div>
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
