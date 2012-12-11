@@ -6,12 +6,14 @@ PODS:
 - SDWebImage (3.0):
   - SDWebImage/Main (= 3.0)
 - SDWebImage/Main (3.0)
+- SSPullToRefresh (1.0.1)
 
 DEPENDENCIES:
 - MBProgressHUD (~> 0.5)
 - MHPrettyDate (~> 1.0.1)
 - NSRails (from `https://github.com/huacnlee/nsrails.git', branch `with_cocopods')
 - SDWebImage (~> 3.0)
+- SSPullToRefresh (~> 1.0.1)
 
 EXTERNAL SOURCES:
   NSRails:
@@ -24,5 +26,6 @@ SPEC CHECKSUMS:
   NSRails: ca02b8858faddda7e57383571b56bb78ebf37d8e
   SDWebImage: afa3965bcb37797ba4ecac49393897b99d1b4be7
   SDWebImage/Main: afa3965bcb37797ba4ecac49393897b99d1b4be7
+  SSPullToRefresh: 79a7981b5a08316749d8fae0b5c813fbc2fac7dd
 
 COCOAPODS: 0.16.0

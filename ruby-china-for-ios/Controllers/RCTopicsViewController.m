@@ -29,9 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:tableView delegate:self];
+    
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reload_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
     self.navigationController.navigationBar.topItem.title = @"社区";
     self.navigationController.navigationBar.topItem.leftBarButtonItem = refreshButton;
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self refresh];
 }
@@ -46,10 +50,16 @@
 
 #pragma mark - 基础方法
 - (void) refresh {
+    [pullToRefreshView startLoading];
     [RCTopic remoteAllAsync:^(NSArray *allRemote, NSError *error) {
         topics = allRemote;
         [tableView reloadData];
     }];
+    [pullToRefreshView finishLoading];
+}
+
+- (void) pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self refresh];
 }
 
 #pragma mark - TableView delegate

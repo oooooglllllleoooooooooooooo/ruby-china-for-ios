@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "RCViewController.h"
+#import <SSPullToRefresh.h>
 
-@interface RCTopicsViewController : RCViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface RCTopicsViewController : RCViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate, SSPullToRefreshContentView> {
     NSArray *topics;
+    
+    SSPullToRefreshView *pullToRefreshView;
 }
 
 
