@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCNavLeftRightButtonItem.h"
 
 @interface RCNavigationBar : UINavigationBar {
     UIImage *bgImage;

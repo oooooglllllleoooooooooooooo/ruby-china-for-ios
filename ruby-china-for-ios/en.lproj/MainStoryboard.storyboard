@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fFC-Jr-qJp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fFC-Jr-qJp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -28,9 +28,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FI3-mE-5lq" customClass="RCTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FI3-mE-5lq" customClass="RCTableView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="qSm-J4-PZY"/>
@@ -39,6 +37,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FI3-mE-5lq" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="GNx-Ip-1GH"/>
+                            <constraint firstItem="FI3-mE-5lq" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="Xab-eO-FG3"/>
+                            <constraint firstItem="FI3-mE-5lq" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="aHi-tm-kuT"/>
+                            <constraint firstItem="FI3-mE-5lq" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="wTM-Ed-PEY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="话题" image="spechbubble_2_icon.png" id="7"/>
                     <navigationItem key="navigationItem" id="9RC-4z-QF1"/>
@@ -59,9 +63,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6kW-dz-zmc" customClass="RCTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6kW-dz-zmc" customClass="RCTableView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ict-Dp-uwZ" id="ehv-Sl-fvi"/>
@@ -70,6 +72,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6kW-dz-zmc" firstAttribute="leading" secondItem="23e-lE-vYc" secondAttribute="leading" type="default" id="UEO-Kv-wa4"/>
+                            <constraint firstItem="6kW-dz-zmc" firstAttribute="bottom" secondItem="23e-lE-vYc" secondAttribute="bottom" type="default" id="g9B-0J-9oh"/>
+                            <constraint firstItem="6kW-dz-zmc" firstAttribute="trailing" secondItem="23e-lE-vYc" secondAttribute="trailing" type="default" id="gYV-bW-re3"/>
+                            <constraint firstItem="6kW-dz-zmc" firstAttribute="top" secondItem="23e-lE-vYc" secondAttribute="top" type="default" id="oqf-Od-W4O"/>
+                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -86,6 +94,9 @@
         <image name="spechbubble_2_icon.png" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="RCNavigationBar" superclassName="UINavigationBar">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RCNavigationBar.h"/>
         </class>

@@ -13,16 +13,10 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
-        self.topItem.leftBarButtonItem.style = UIBarButtonItemStyleDone;
-        self.topItem.rightBarButtonItem.style = UIBarButtonItemStyleDone;
-        bgImage = [UIImage imageNamed:@"navbar_bg.png"];
+        self.backgroundColor = [UIColor clearColor];
+        [self setBackgroundImage:[UIImage imageNamed:@"navbar_bg"] forBarMetrics:UIBarMetricsDefault];
     }
     return self;
-}
-
-- (void) drawRect:(CGRect)rect {
-    [bgImage drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "RCTopicTableViewCell.h"
 #import "RCAll.h"
 #import <MBProgressHUD.h>
+#import "RCNavigationBar.h"
 
 static RCTopicViewController *sharedInstance;
 
@@ -46,6 +47,11 @@ static RCTopicViewController *sharedInstance;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    
+    [navBar.backItem.backBarButtonItem setImage:[UIImage imageNamed:@"nav_back_icon"]];
+    [navBar.backItem.backBarButtonItem setStyle:UIBarButtonItemStyleDone];
 }
 
 

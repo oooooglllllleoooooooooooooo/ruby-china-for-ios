@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RCViewController.h"
 #import <SSPullToRefresh.h>
+#import "RCNavLeftRightButtonItem.h"
 
 @interface RCTopicsViewController : RCViewController <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate, SSPullToRefreshContentView> {
     NSArray *topics;

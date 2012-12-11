@@ -24,6 +24,13 @@
 		96A4D0A316771202000EAFAB /* tableview_cell_border_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D09F16771202000EAFAB /* tableview_cell_border_bottom@2x.png */; };
 		96A4D0A416771202000EAFAB /* tableview_cell_border_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0A016771202000EAFAB /* tableview_cell_border_top.png */; };
 		96A4D0A516771202000EAFAB /* tableview_cell_border_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0A116771202000EAFAB /* tableview_cell_border_top@2x.png */; };
+		96A4D0C31677268A000EAFAB /* nav_menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0BF1677268A000EAFAB /* nav_menu_icon.png */; };
+		96A4D0C41677268A000EAFAB /* nav_menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0C01677268A000EAFAB /* nav_menu_icon@2x.png */; };
+		96A4D0C51677268A000EAFAB /* nav_setting_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0C11677268A000EAFAB /* nav_setting_icon.png */; };
+		96A4D0C61677268A000EAFAB /* nav_setting_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0C21677268A000EAFAB /* nav_setting_icon@2x.png */; };
+		96A4D0C91677282A000EAFAB /* RCNavLeftRightButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A4D0C81677282A000EAFAB /* RCNavLeftRightButtonItem.m */; };
+		96A4D0CC16772C7C000EAFAB /* nav_back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0CA16772C7C000EAFAB /* nav_back_icon.png */; };
+		96A4D0CD16772C7C000EAFAB /* nav_back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A4D0CB16772C7C000EAFAB /* nav_back_icon@2x.png */; };
 		96EE8A3516760D1500DF5FE6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EE8A3416760D1500DF5FE6 /* CoreData.framework */; };
 		96FF7F831675D41500ADC02E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F821675D41500ADC02E /* UIKit.framework */; };
 		96FF7F851675D41500ADC02E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7F841675D41500ADC02E /* Foundation.framework */; };
@@ -73,6 +80,14 @@
 		96A4D09F16771202000EAFAB /* tableview_cell_border_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_cell_border_bottom@2x.png"; sourceTree = "<group>"; };
 		96A4D0A016771202000EAFAB /* tableview_cell_border_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableview_cell_border_top.png; sourceTree = "<group>"; };
 		96A4D0A116771202000EAFAB /* tableview_cell_border_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_cell_border_top@2x.png"; sourceTree = "<group>"; };
+		96A4D0BF1677268A000EAFAB /* nav_menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_menu_icon.png; sourceTree = "<group>"; };
+		96A4D0C01677268A000EAFAB /* nav_menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_menu_icon@2x.png"; sourceTree = "<group>"; };
+		96A4D0C11677268A000EAFAB /* nav_setting_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_setting_icon.png; sourceTree = "<group>"; };
+		96A4D0C21677268A000EAFAB /* nav_setting_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_setting_icon@2x.png"; sourceTree = "<group>"; };
+		96A4D0C71677282A000EAFAB /* RCNavLeftRightButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNavLeftRightButtonItem.h; sourceTree = "<group>"; };
+		96A4D0C81677282A000EAFAB /* RCNavLeftRightButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNavLeftRightButtonItem.m; sourceTree = "<group>"; };
+		96A4D0CA16772C7C000EAFAB /* nav_back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_icon.png; sourceTree = "<group>"; };
+		96A4D0CB16772C7C000EAFAB /* nav_back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@2x.png"; sourceTree = "<group>"; };
 		96EE8A3416760D1500DF5FE6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		96FF7F7E1675D41500ADC02E /* ruby-china-for-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ruby-china-for-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FF7F821675D41500ADC02E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -215,6 +230,12 @@
 		96FF7FB21675D70200ADC02E /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				96A4D0CA16772C7C000EAFAB /* nav_back_icon.png */,
+				96A4D0CB16772C7C000EAFAB /* nav_back_icon@2x.png */,
+				96A4D0BF1677268A000EAFAB /* nav_menu_icon.png */,
+				96A4D0C01677268A000EAFAB /* nav_menu_icon@2x.png */,
+				96A4D0C11677268A000EAFAB /* nav_setting_icon.png */,
+				96A4D0C21677268A000EAFAB /* nav_setting_icon@2x.png */,
 				969436A5167649B300F1E1A9 /* reload_icon.png */,
 				969436A6167649B300F1E1A9 /* reload_icon@2x.png */,
 			);
@@ -279,6 +300,8 @@
 				9694364B16762DD100F1E1A9 /* RCTableView.m */,
 				969436581676326B00F1E1A9 /* RCViewController.h */,
 				969436591676326B00F1E1A9 /* RCViewController.m */,
+				96A4D0C71677282A000EAFAB /* RCNavLeftRightButtonItem.h */,
+				96A4D0C81677282A000EAFAB /* RCNavLeftRightButtonItem.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -355,6 +378,12 @@
 				96A4D0A316771202000EAFAB /* tableview_cell_border_bottom@2x.png in Resources */,
 				96A4D0A416771202000EAFAB /* tableview_cell_border_top.png in Resources */,
 				96A4D0A516771202000EAFAB /* tableview_cell_border_top@2x.png in Resources */,
+				96A4D0C31677268A000EAFAB /* nav_menu_icon.png in Resources */,
+				96A4D0C41677268A000EAFAB /* nav_menu_icon@2x.png in Resources */,
+				96A4D0C51677268A000EAFAB /* nav_setting_icon.png in Resources */,
+				96A4D0C61677268A000EAFAB /* nav_setting_icon@2x.png in Resources */,
+				96A4D0CC16772C7C000EAFAB /* nav_back_icon.png in Resources */,
+				96A4D0CD16772C7C000EAFAB /* nav_back_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +443,7 @@
 				9694365A1676326B00F1E1A9 /* RCViewController.m in Sources */,
 				96943661167637D400F1E1A9 /* RCTopicViewController.m in Sources */,
 				9694366816763E8800F1E1A9 /* RCNavigationBar.m in Sources */,
+				96A4D0C91677282A000EAFAB /* RCNavLeftRightButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

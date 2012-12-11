@@ -32,9 +32,23 @@
     
     pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:tableView delegate:self];
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reload_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonClick)];
-    self.navigationController.navigationBar.topItem.title = @"社区";
-    self.navigationController.navigationBar.topItem.leftBarButtonItem = refreshButton;
+    // MARK: UINavigationBar 设置
+    UINavigationBar *navbar = self.navigationController.navigationBar;
+    
+    // Toolbar
+    RCNavLeftRightButtonItem *rightButton = [[RCNavLeftRightButtonItem alloc] initWithNavBar:navbar
+                                                                                   leftRight:RCNavLeftRightButtonItemTypeRight
+                                                                             withButtonImage:[UIImage imageNamed:@"nav_setting_icon"]
+                                                                                  withTarget:self
+                                                                                withSelector:@selector(refreshButtonClick)];
+    
+    RCNavLeftRightButtonItem *leftButton  = [[RCNavLeftRightButtonItem alloc] initWithNavBar:navbar
+                                                                                   leftRight:RCNavLeftRightButtonItemTypeLeft
+                                                                             withButtonImage:[UIImage imageNamed:@"nav_menu_icon"]
+                                                                                  withTarget:self
+                                                                                withSelector:@selector(refreshButtonClick)];
+    
+    navbar.topItem.title = @"社区";
     
 	// Do any additional setup after loading the view, typically from a nib.
     [self refresh];
