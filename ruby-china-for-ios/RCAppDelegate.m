@@ -8,7 +8,7 @@
 
 #import "RCAppDelegate.h"
 #import "RCViewController.h"
-#import "NSRConfig.h"
+#import <NSRails.h>
 #import "RCAll.h"
 
 #ifdef DEBUG

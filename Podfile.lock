@@ -2,6 +2,7 @@
 PODS:
 - MBProgressHUD (0.5)
 - MHPrettyDate (1.0.1)
+- NSRails (2.0.1)
 - SDWebImage (3.0):
   - SDWebImage/Main (= 3.0)
 - SDWebImage/Main (3.0)
@@ -9,11 +10,18 @@ PODS:
 DEPENDENCIES:
 - MBProgressHUD (~> 0.5)
 - MHPrettyDate (~> 1.0.1)
+- NSRails (from `https://github.com/huacnlee/nsrails.git', branch `with_cocopods')
 - SDWebImage (~> 3.0)
+
+EXTERNAL SOURCES:
+  NSRails:
+    :git: https://github.com/huacnlee/nsrails.git
+    :branch: with_cocopods
 
 SPEC CHECKSUMS:
   MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
   MHPrettyDate: 20779da456ad9c512a6a241929ac6cd53821794d
+  NSRails: ca02b8858faddda7e57383571b56bb78ebf37d8e
   SDWebImage: afa3965bcb37797ba4ecac49393897b99d1b4be7
   SDWebImage/Main: afa3965bcb37797ba4ecac49393897b99d1b4be7
 
