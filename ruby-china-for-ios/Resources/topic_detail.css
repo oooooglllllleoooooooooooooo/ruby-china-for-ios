@@ -22,6 +22,34 @@ p {
   float: left;
 }
 
+.body code {
+  font-size: 12px!important;
+  background-color: #f8f8ff!important;
+  color: #444!important;
+  padding: 0 .2em!important;
+  border: 1px solid #dedede!important;
+}
+
+.topics .topic .body code, #replies .reply .body code {
+  margin: 0 2px;
+  font-family: Monaco,Menlo, "Courier New", monospace;
+}
+
+.body pre {
+  font-family: Monaco,Menlo,"Courier New", monospace;
+  margin: 3px 0;
+  font-size: 12px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 5px;
+  color: #444;
+  overflow: auto;
+  -webkit-box-shadow: rgba(0,0,0,0.07) 0 1px 2px inset;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 .box {
   background-color: #fff;
   padding: 10px;
@@ -47,7 +75,6 @@ p {
 .box_gray {
   background: #F5F5F5;
 }
-
 
 .topics .topic .avatar {
   width: 56px;
@@ -165,26 +192,10 @@ form .node_select select {
   width: 180px;
 }
 
+
 #topic_show h1 {
-  font-size: 22px;
-  color: #333;
-  text-align: left;
-  line-height: 100%;
-  margin-bottom: 8px;
-}
-#topic_show .infos {
-  position: relative;
-  margin-bottom: 10px;
-  margin-right: 56px;
-  border-bottom: 1px solid #ddd;
-  margin: 0 -10px;
-  padding: 0 10px 5px 10px;
-}
-#topic_show .avatar_large {
-  width: 48px;
-}
-#topic_show h1 {
-  font-size: 22px;
+  font-size: 16px;
+  word-break:break-all;
   color: #333;
   text-align: left;
   line-height: 100%;
