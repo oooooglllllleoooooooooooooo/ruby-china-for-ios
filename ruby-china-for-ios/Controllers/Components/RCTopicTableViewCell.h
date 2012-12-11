@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class RCTopic;
+@class SSBadgeView;
 
 @interface RCTopicTableViewCell : UITableViewCell <UITextFieldDelegate> {
     UIImageView *avatarImageView;
@@ -16,6 +17,8 @@
     UILabel *infoLabel;
     UILabel *counterLabel;
     UILabel *bodyLabel;
+    SSBadgeView *badgeView;
+
     RCTopic *topic;
 }
 

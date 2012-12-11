@@ -32,13 +32,14 @@
     
     pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:tableView delegate:self];
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reload_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reload_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonClick)];
     self.navigationController.navigationBar.topItem.title = @"社区";
     self.navigationController.navigationBar.topItem.leftBarButtonItem = refreshButton;
     
 	// Do any additional setup after loading the view, typically from a nib.
     [self refresh];
 }
+
 
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +50,10 @@
 
 
 #pragma mark - 基础方法
+- (void) refreshButtonClick {
+    [pullToRefreshView startLoadingAndExpand:YES];
+}
+
 - (void) refresh {
     [pullToRefreshView startLoading];
     [RCTopic remoteAllAsync:^(NSArray *allRemote, NSError *error) {
@@ -72,7 +77,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    int titleWidth = self.view.frame.size.width - 32 - 40;
+    int titleWidth = self.view.frame.size.width - 30 - 40;
     RCTopic *topic = [topics objectAtIndex:indexPath.row];
     NSString *titleString = topic.title;
 	NSString *detailString = topic.nodeName;

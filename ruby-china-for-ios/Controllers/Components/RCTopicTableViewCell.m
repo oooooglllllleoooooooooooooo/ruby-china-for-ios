@@ -11,11 +11,16 @@
 #import "RCUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MHPrettyDate.h>
+#import <SSToolkit/SSLabel.h>
+#import <SSToolkit/SSBadgeView.h>
 
 #define kTitleTextColor [UIColor colorWithRed:0.3255 green:0.3294 blue:0.3373 alpha:1.0000]
 #define kTitleFontSize 14
 #define kSubTextColor [UIColor colorWithRed:0.8078 green:0.8118 blue:0.8196 alpha:1.0000]
 #define kSubTextFontSize 12
+
+#define kBadgeColor [UIColor colorWithRed:0.1098 green:0.4980 blue:0.8588 alpha:1.0000]
+#define kBadgeWidth 40
 
 #define kBackgrounImage [UIImage imageNamed:@"tableview_cell_bg.png"]
 #define kBorderTopImage [UIImage imageNamed:@"tableview_cell_border_top.png"]
@@ -40,7 +45,7 @@
         [avatarImageView setImageWithURL:[NSURL URLWithString:topic.user.avatarUrl] placeholderImage:[RCUser defaultAvatarImage]];
         [self addSubview:avatarImageView];
         
-        int titleWidth = self.frame.size.width - avatarImageView.frame.size.width - 30;
+        int titleWidth = self.frame.size.width - avatarImageView.frame.size.width - 30 - kBadgeWidth;
         CGSize titleSize = [topic.title sizeWithFont:[UIFont systemFontOfSize:kTitleFontSize]
                                    constrainedToSize:CGSizeMake(titleWidth, MAXFLOAT)
                                        lineBreakMode:NSLineBreakByWordWrapping];
@@ -66,14 +71,7 @@
         [infoLabel setTextColor:kSubTextColor];
         [self addSubview:infoLabel];
         
-        counterLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 100, infoLabel.frame.origin.y, 90, 14)];
-        counterLabel.backgroundColor = [UIColor clearColor];
-        [counterLabel setText:[NSString stringWithFormat:@"%d回复",[topic.repliesCount intValue]]];
-        [counterLabel setFont:[UIFont systemFontOfSize:kSubTextFontSize]];
-        [counterLabel setTextAlignment:NSTextAlignmentRight];
-        [counterLabel setTextColor:kSubTextColor];
-        [self addSubview:counterLabel];
-        
+               
         if (isForDetail) {
             bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x, infoLabel.frame.origin.y + 20, titleWidth, 14)];
             [bodyLabel setText:topic.bodyHtml];
@@ -83,6 +81,16 @@
             [bodyLabel setLineBreakMode:NSLineBreakByWordWrapping];
             bodyLabel.textAlignment = NSTextAlignmentLeft;
             [self addSubview:bodyLabel];
+        }
+        else {
+            badgeView = [[SSBadgeView alloc] initWithFrame:CGRectMake(self.frame.size.width - kBadgeWidth - 10, 10, kBadgeWidth, 16)];
+            badgeView.textLabel.text = [NSString stringWithFormat:@"%d",topic.repliesCount.intValue];
+            badgeView.backgroundColor = [UIColor clearColor];
+            badgeView.textLabel.font = [UIFont boldSystemFontOfSize:12.0f];
+            badgeView.cornerRadius = 8;
+            badgeView.badgeColor = kBadgeColor;
+            badgeView.badgeAlignment = SSBadgeViewAlignmentRight;
+            [self addSubview:badgeView];
         }
         
     }
