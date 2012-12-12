@@ -63,17 +63,9 @@ static RCTopicViewController *sharedInstance;
     webView.scrollView.delegate = self;
     
     // MARK: 手势
-    UISwipeGestureRecognizer *recognizerRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToRight)];
+    UISwipeGestureRecognizer *recognizerRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
     [webView addGestureRecognizer:recognizerRight];
-    
-    UISwipeGestureRecognizer *recognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToUp)];
-    recognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
-    [webView addGestureRecognizer:recognizerUp];
-    
-    UISwipeGestureRecognizer *recognizerDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToDown)];
-    recognizerDown.direction = UISwipeGestureRecognizerDirectionDown;
-    [webView addGestureRecognizer:recognizerDown];
 }
 
 
@@ -168,16 +160,19 @@ static RCTopicViewController *sharedInstance;
 }
 
 #pragma mark - 手势
-- (void)handleSwipeToRight {
-    [self.navigationController popViewControllerAnimated:YES];
-}
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer  {
+    switch (recognizer.direction) {
+        case UISwipeGestureRecognizerDirectionRight:
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        case UISwipeGestureRecognizerDirectionDown:
+            break;
+        case UISwipeGestureRecognizerDirectionUp:
+            break;
+        default:
+            break;
+    }
 
-- (void)handleSwipeToUp {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
-- (void)handleSwipeToDown {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end
