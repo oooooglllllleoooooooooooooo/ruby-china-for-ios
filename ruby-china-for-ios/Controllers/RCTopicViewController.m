@@ -39,7 +39,6 @@ static RCTopicViewController *sharedInstance;
     [self setupBlankWebView];
     [RCTopic remoteObjectWithID:aTopic.remoteID async:^(id object, NSError *error) {
         topic = object;
-        sleep(2);
         [self setupWebView];
         [hud hide:YES];
     }];
@@ -60,8 +59,16 @@ static RCTopicViewController *sharedInstance;
     [navBar.backItem.backBarButtonItem setStyle:UIBarButtonItemStyleDone];
     
     webView.backgroundColor = [UIColor clearColor];
+    webView.scrollView.bounces = NO;
+    
+    // MARK: 手势
+    UISwipeGestureRecognizer *recognizerRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToRight)];
+    recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [webView addGestureRecognizer:recognizerRight];
 }
 
+
+#pragma mark - WebView
 - (void) setupBlankWebView {
     NSString *html = @"";
     NSString *path = [[NSBundle mainBundle] bundlePath];
@@ -150,4 +157,10 @@ static RCTopicViewController *sharedInstance;
     html = [html stringByReplacingOccurrencesOfString:key withString:stringValue];
     return html;
 }
+
+#pragma mark - 手势
+- (void)handleSwipeToRight {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

@@ -10,6 +10,7 @@
 #import "RCTopicViewController.h"
 #import "RCTopicTableViewCell.h"
 #import "RCAll.h"
+#import <SSPullToRefresh/SSPullToRefresh.h>
 
 @interface RCTopicsViewController ()
 
@@ -31,6 +32,10 @@
     [super viewDidLoad];
     
     pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:tableView delegate:self];
+    SSPullToRefreshDefaultContentView *contentView = (SSPullToRefreshDefaultContentView *)pullToRefreshView.contentView;
+    contentView.statusLabel.textColor = [UIColor grayColor];
+    contentView.lastUpdatedAtLabel.textColor = [UIColor darkGrayColor];
+    contentView.activityIndicatorView.color = [UIColor lightGrayColor];
     
     // MARK: UINavigationBar 设置
     UINavigationBar *navbar = self.navigationController.navigationBar;
