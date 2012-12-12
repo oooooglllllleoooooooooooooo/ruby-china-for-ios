@@ -60,11 +60,20 @@ static RCTopicViewController *sharedInstance;
     
     webView.backgroundColor = [UIColor clearColor];
     webView.scrollView.bounces = NO;
+    webView.scrollView.delegate = self;
     
     // MARK: 手势
     UISwipeGestureRecognizer *recognizerRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToRight)];
     recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
     [webView addGestureRecognizer:recognizerRight];
+    
+    UISwipeGestureRecognizer *recognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToUp)];
+    recognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [webView addGestureRecognizer:recognizerUp];
+    
+    UISwipeGestureRecognizer *recognizerDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeToDown)];
+    recognizerDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [webView addGestureRecognizer:recognizerDown];
 }
 
 
@@ -120,7 +129,7 @@ static RCTopicViewController *sharedInstance;
             [replies addObject:replyHtml];
         }
         
-        repliesTemplate = [self replaceHtml:repliesTemplate forKey:@"replies_colection" value:[replies componentsJoinedByString:@"\n"]];
+        repliesTemplate = [self replaceHtml:repliesTemplate forKey:@"replies_collection" value:[replies componentsJoinedByString:@"\n"]];
         html = [self replaceHtml:html forKey:@"_replies" value:repliesTemplate];
     }
     else {
@@ -161,6 +170,14 @@ static RCTopicViewController *sharedInstance;
 #pragma mark - 手势
 - (void)handleSwipeToRight {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)handleSwipeToUp {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)handleSwipeToDown {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end

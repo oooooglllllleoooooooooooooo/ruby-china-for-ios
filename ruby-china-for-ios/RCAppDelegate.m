@@ -11,7 +11,7 @@
 #import <NSRails.h>
 #import "RCAll.h"
 
-#ifdef DEBUG
+#ifdef DEBUG1
 #define kAPIURL @"http://127.0.0.1:3000/api/"
 #else
 #define kAPIURL @"http://ruby-china.org/api/"
