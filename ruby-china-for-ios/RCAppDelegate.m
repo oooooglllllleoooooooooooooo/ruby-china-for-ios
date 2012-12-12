@@ -11,7 +11,7 @@
 #import <NSRails.h>
 #import "RCAll.h"
 
-#ifdef DEBUG1
+#ifdef DEBUG
 #define kAPIURL @"http://127.0.0.1:3000/api/"
 #else
 #define kAPIURL @"http://ruby-china.org/api/"
@@ -23,8 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [NSRConfig defaultConfig].dateFormat = @"yyyy-MM-dd'T'HH:mm:sszz";
     [NSRConfig defaultConfig].appURL = kAPIURL;
-    [NSRConfig defaultConfig].dateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";;
+
     return YES;
 }
 							

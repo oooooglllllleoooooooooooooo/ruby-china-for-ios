@@ -13,7 +13,7 @@
 #import "RCReply.h"
 
 @implementation RCTopic
-@synthesize user, node, lastReplyUserId, lastReplyUserLogin, replies, title, body, bodyHtml, repliesCount, repliedAt, createdAt, updatedAt, nodeId, nodeName;
+@synthesize user, node, lastReplyUserId, lastReplyUserLogin, replies, title, body, bodyHtml, repliesCount, repliedAt, createdAt, updatedAt, nodeId, nodeName, hits;
 
 - (Class) nestedClassForProperty:(NSString *)property
 {

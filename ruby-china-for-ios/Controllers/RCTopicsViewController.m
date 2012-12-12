@@ -77,8 +77,13 @@
     [pullToRefreshView finishLoading];
 }
 
+#pragma mark - PullToRefresh
 - (void) pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
     [self refresh];
+}
+
+- (void)setState:(SSPullToRefreshViewState)state withPullToRefreshView:(SSPullToRefreshView *)view {
+    
 }
 
 #pragma mark - TableView delegate

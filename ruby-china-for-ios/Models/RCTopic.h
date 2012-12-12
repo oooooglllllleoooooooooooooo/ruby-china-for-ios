@@ -18,7 +18,7 @@
 @property (nonatomic, strong) RCNode *node;
 @property (nonatomic, strong) NSMutableArray *replies;
 @property (nonatomic, strong) NSString *title, *body, *bodyHtml, *nodeName, *lastReplyUserLogin;
-@property (nonatomic, strong) NSNumber *repliesCount, *lastReplyUserId, *nodeId;
+@property (nonatomic, strong) NSNumber *repliesCount, *lastReplyUserId, *nodeId, *hits;
 @property (nonatomic, strong) NSDate *repliedAt, *createdAt, *updatedAt;
 
 @end

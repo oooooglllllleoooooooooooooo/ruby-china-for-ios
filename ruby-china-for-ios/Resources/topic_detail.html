@@ -17,20 +17,18 @@
         </div>
         <h1 class="entry-title">{{title}}</h1>
         <div class="info leader">
-          <a href="/topics/node{{node_id}}" class="node">{{node_name}}</a>
-          •
-          <a href="/{{user_login}}">{{user_login}}</a>
-          •
-          于<abbr class="timeago" title="{{created_at}}"></abbr>发布
-            •
-            最后由 <a href="/{{last_reply_user_login}}">{{last_reply_user_login}}</a> 于<abbr class="timeago" title="{{replied_at}}"></abbr>回复
-          •
-            {{hits}}次阅读
+          <span><a href="/topics/node{{node_id}}" class="node">{{node_name}}</a></span> •
+          <span><a href="/{{user_login}}">{{user_login}}</a></span> •
+          <span>于<abbr class="timeago" title="">{{created_at}}</abbr>发布</span> •
+          <span>最后由 <a href="/{{last_reply_user_login}}">{{last_reply_user_login}}</a> 于<abbr class="timeago" title="">{{replied_at}}</abbr>回复</span>
         </div>
       </div>
 
       <div class="body entry-content" id="topic_body">
         {{body_html}}
+      </div>
+      <div class="last_info">
+        <span>{{hits}}次阅读</span>
       </div>
     </div>
   </div>

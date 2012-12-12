@@ -10,7 +10,6 @@
 #import "RCTopic.h"
 #import "RCUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <MHPrettyDate.h>
 #import <SSToolkit/SSLabel.h>
 #import <SSToolkit/SSBadgeView.h>
 

@@ -96,6 +96,15 @@ p {
   margin-bottom: 2px;
   font-size: 12px;
 }
+.topics .topic .info abbr { margin:0 4px; }
+.topics .last_info {
+    color:#999;
+}
+
+.topics .topic span,
+.topics .topic code,
+.topics .topic a { display:inline-block; }
+
 .topics .topic .info .node {
   padding: 1px 5px;
   color: #778087;

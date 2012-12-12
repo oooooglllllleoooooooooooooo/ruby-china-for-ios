@@ -11,7 +11,7 @@
 #import "RCAll.h"
 #import <MBProgressHUD.h>
 #import "RCNavigationBar.h"
-#import <MHPrettyDate.h>
+#import "NSDate+TimeAgo.h"
 
 #define kTopicDetailFileName @"topic_detail.html"
 
@@ -70,8 +70,9 @@ static RCTopicViewController *sharedInstance;
     html = [self replaceHtml:html forKey:@"node_id" value:topic.nodeId];
     html = [self replaceHtml:html forKey:@"node_name" value:topic.nodeName];
     html = [self replaceHtml:html forKey:@"last_reply_user_login" value:topic.lastReplyUserLogin];
-    html = [self replaceHtml:html forKey:@"replied_at" value:topic.repliedAt];
-    html = [self replaceHtml:html forKey:@"hits" value:@""];
+    html = [self replaceHtml:html forKey:@"created_at" value:[topic.createdAt timeAgo]];
+    html = [self replaceHtml:html forKey:@"replied_at" value:[topic.repliedAt timeAgo]];
+    html = [self replaceHtml:html forKey:@"hits" value:topic.hits];
     html = [self replaceHtml:html forKey:@"replies_count" value:topic.repliesCount];
     
     NSMutableArray *replies = [NSMutableArray arrayWithCapacity:0];
@@ -85,15 +86,13 @@ static RCTopicViewController *sharedInstance;
         replyHtml = [self replaceHtml:replyHtml forKey:@"reply.id" value:reply.remoteID];
         replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_login" value:reply.user.login];
         replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_avatar_url" value:reply.user.avatarUrl];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.created_at" value:reply.createdAt];
+        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.created_at" value:[reply.createdAt timeAgo]];
         replyHtml = [self replaceHtml:replyHtml forKey:@"reply.body_html" value:reply.bodyHtml];
         
         [replies addObject:replyHtml];
     }
     
     html = [self replaceHtml:html forKey:@"replies_collection" value:[replies componentsJoinedByString:@"\n"]];
-    
-    NSLog(@"%@",html);
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
@@ -117,8 +116,7 @@ static RCTopicViewController *sharedInstance;
         stringValue = [value stringValue];
     }
     else if ([value isKindOfClass:[NSDate class]]) {
-        stringValue = [MHPrettyDate prettyDateFromDate:value
-                                            withFormat:MHPrettyDateFormatWithTime];
+        stringValue = [value timeAgo];
     }
 
     
