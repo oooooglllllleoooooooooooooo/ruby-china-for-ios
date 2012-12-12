@@ -60,7 +60,10 @@ static RCTopicViewController *sharedInstance;
 
 - (void) setupWebView {
     NSString *html = [self readTemplate:@"topic_detail"];
+    NSString *repliesTemplate = [self readTemplate:@"_replies"];
+    NSString *noRepliesTemplate = [self readTemplate:@"_no_replies"];
     NSString *_replyTemplate = [self readTemplate:@"_reply"];
+    NSString *lastReplyInfo = [self readTemplate:@"_last_reply_info"];
     
     html = [self replaceHtml:html forKey:@"bundle_path" value:[[NSBundle mainBundle] resourcePath]];
     html = [self replaceHtml:html forKey:@"title" value:topic.title];
@@ -69,30 +72,42 @@ static RCTopicViewController *sharedInstance;
     html = [self replaceHtml:html forKey:@"user_avatar_url" value:topic.user.avatarUrl];
     html = [self replaceHtml:html forKey:@"node_id" value:topic.nodeId];
     html = [self replaceHtml:html forKey:@"node_name" value:topic.nodeName];
-    html = [self replaceHtml:html forKey:@"last_reply_user_login" value:topic.lastReplyUserLogin];
+    if (topic.lastReplyUserLogin) {
+        lastReplyInfo = [self replaceHtml:lastReplyInfo forKey:@"last_reply_user_login" value:topic.lastReplyUserLogin];
+        lastReplyInfo = [self replaceHtml:lastReplyInfo forKey:@"replied_at" value:[topic.repliedAt timeAgo]];
+    }
+    else {
+        lastReplyInfo = @"";
+    }
+    html = [self replaceHtml:html forKey:@"_last_reply_info" value:lastReplyInfo];
     html = [self replaceHtml:html forKey:@"created_at" value:[topic.createdAt timeAgo]];
-    html = [self replaceHtml:html forKey:@"replied_at" value:[topic.repliedAt timeAgo]];
     html = [self replaceHtml:html forKey:@"hits" value:topic.hits];
     html = [self replaceHtml:html forKey:@"replies_count" value:topic.repliesCount];
     
     NSMutableArray *replies = [NSMutableArray arrayWithCapacity:0];
-    for (int i = 0; i < topic.replies.count; i ++) {
-        RCReply *reply = [topic.replies objectAtIndex:i];
-        NSString *replyHtml = [_replyTemplate copy];
+    if (topic.replies.count > 0) {
+        for (int i = 0; i < topic.replies.count; i ++) {
+            RCReply *reply = [topic.replies objectAtIndex:i];
+            NSString *replyHtml = [_replyTemplate copy];
+            
+            NSNumber *floor = [NSNumber numberWithInt:(i + 1)];
+            
+            replyHtml = [self replaceHtml:replyHtml forKey:@"floor" value:floor];
+            replyHtml = [self replaceHtml:replyHtml forKey:@"reply.id" value:reply.remoteID];
+            replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_login" value:reply.user.login];
+            replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_avatar_url" value:reply.user.avatarUrl];
+            replyHtml = [self replaceHtml:replyHtml forKey:@"reply.created_at" value:[reply.createdAt timeAgo]];
+            replyHtml = [self replaceHtml:replyHtml forKey:@"reply.body_html" value:reply.bodyHtml];
+            
+            [replies addObject:replyHtml];
+        }
         
-        NSNumber *floor = [NSNumber numberWithInt:(i + 1)];
-        
-        replyHtml = [self replaceHtml:replyHtml forKey:@"floor" value:floor];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.id" value:reply.remoteID];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_login" value:reply.user.login];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.user_avatar_url" value:reply.user.avatarUrl];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.created_at" value:[reply.createdAt timeAgo]];
-        replyHtml = [self replaceHtml:replyHtml forKey:@"reply.body_html" value:reply.bodyHtml];
-        
-        [replies addObject:replyHtml];
+        repliesTemplate = [self replaceHtml:repliesTemplate forKey:@"replies_colection" value:[replies componentsJoinedByString:@"\n"]];
+        html = [self replaceHtml:html forKey:@"_replies" value:repliesTemplate];
     }
-    
-    html = [self replaceHtml:html forKey:@"replies_collection" value:[replies componentsJoinedByString:@"\n"]];
+    else {
+        html = [self replaceHtml:html forKey:@"_replies" value:noRepliesTemplate];
+    }
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];

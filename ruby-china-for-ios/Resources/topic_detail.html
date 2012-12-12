@@ -17,10 +17,10 @@
         </div>
         <h1 class="entry-title">{{title}}</h1>
         <div class="info leader">
-          <span><a href="/topics/node{{node_id}}" class="node">{{node_name}}</a></span> •
-          <span><a href="/{{user_login}}">{{user_login}}</a></span> •
-          <span>于<abbr class="timeago" title="">{{created_at}}</abbr>发布</span> •
-          <span>最后由 <a href="/{{last_reply_user_login}}">{{last_reply_user_login}}</a> 于<abbr class="timeago" title="">{{replied_at}}</abbr>回复</span>
+          <span><a href="/topics/node{{node_id}}" class="node">{{node_name}}</a></span>
+          •<span><a href="/{{user_login}}">{{user_login}}</a></span>
+          • <span>于<abbr class="timeago" title="">{{created_at}}</abbr>发布</span> 
+          {{_last_reply_info}}
         </div>
       </div>
 
@@ -33,14 +33,7 @@
     </div>
   </div>
 
-  <div id="replies" class="box box_gray">
-    <div class="total">
-      共收到 <b>{{replies_count}}</b> 条回复
-    </div>
-    <div class="items">
-        {{replies_collection}}
-    </div>
-  </div>
+  {{_replies}}
 </div>
 </body>
 </html>
