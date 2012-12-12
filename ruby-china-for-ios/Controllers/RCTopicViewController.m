@@ -35,13 +35,13 @@ static RCTopicViewController *sharedInstance;
 }
 
 - (void) loadRemoteInfo:(RCTopic *) aTopic {
-//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//    hud.mode = MBProgressHUDModeIndeterminate;
-//    hud.labelText = @"载入中";
+    [hud show:YES];
+    [self setupBlankWebView];
     [RCTopic remoteObjectWithID:aTopic.remoteID async:^(id object, NSError *error) {
         topic = object;
+        sleep(2);
         [self setupWebView];
-//        [hud hide:YES];
+        [hud hide:YES];
     }];
     
     
@@ -50,12 +50,23 @@ static RCTopicViewController *sharedInstance;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"载入中";
+    
     UINavigationBar *navBar = self.navigationController.navigationBar;
     
     [navBar.backItem.backBarButtonItem setImage:[UIImage imageNamed:@"nav_back_icon"]];
     [navBar.backItem.backBarButtonItem setStyle:UIBarButtonItemStyleDone];
     
     webView.backgroundColor = [UIColor clearColor];
+}
+
+- (void) setupBlankWebView {
+    NSString *html = @"";
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    [webView loadHTMLString:html baseURL:baseURL];
 }
 
 - (void) setupWebView {

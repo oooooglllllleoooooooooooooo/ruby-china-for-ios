@@ -9,10 +9,12 @@
 #import "RCViewController.h"
 
 @class RCTopic;
+@class MBProgressHUD;
 
 @interface RCTopicViewController : RCViewController <UIWebViewDelegate>  {
     RCTopic *topic;
     IBOutlet UIWebView *webView;
+    MBProgressHUD *hud;
 }
 
 + (RCTopicViewController *) sharedInstance;

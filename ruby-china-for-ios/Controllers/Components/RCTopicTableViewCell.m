@@ -14,14 +14,17 @@
 #import <SSToolkit/SSBadgeView.h>
 
 #define kTitleTextColor [UIColor colorWithRed:0.3255 green:0.3294 blue:0.3373 alpha:1.0000]
+#define kTitleTextHighlightColor [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1.0000]
 #define kTitleFontSize 14
+
 #define kSubTextColor [UIColor colorWithRed:0.8078 green:0.8118 blue:0.8196 alpha:1.0000]
+#define kSubTextHighlightColor [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0000]
 #define kSubTextFontSize 12
 
 #define kBadgeColor [UIColor colorWithRed:0.1098 green:0.4980 blue:0.8588 alpha:1.0000]
 #define kBadgeWidth 40
 
-#define kBackgrounImage [UIImage imageNamed:@"tableview_cell_bg.png"]
+#define kBackgroundHighlightColor [UIColor colorWithRed:0.9686 green:0.9490 blue:0.9882 alpha:1.0000]
 #define kBorderTopImage [UIImage imageNamed:@"tableview_cell_border_top.png"]
 #define kBorderBottomImage [UIImage imageNamed:@"tableview_cell_border_bottom.png"]
 
@@ -37,8 +40,7 @@
     topic = aTopic;
     
     if (self) {
-        
-//        self.backgroundColor = [UIColor whiteColor];
+        self.selectionStyle = UITableViewCellSelectionStyleGray;
         
         avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 32, 32)];
         [avatarImageView setImageWithURL:[NSURL URLWithString:topic.user.avatarUrl] placeholderImage:[RCUser defaultAvatarImage]];
@@ -57,6 +59,7 @@
         [titleLabel setText:topic.title];
         [titleLabel setFont:[UIFont systemFontOfSize:kTitleFontSize]];
         [titleLabel setTextColor:kTitleTextColor];
+        [titleLabel setHighlightedTextColor:kTitleTextHighlightColor];
         [self.contentView addSubview:titleLabel];
         
         
@@ -68,39 +71,29 @@
         infoLabel.backgroundColor = [UIColor clearColor];
         [infoLabel setFont:[UIFont systemFontOfSize:kSubTextFontSize]];
         [infoLabel setTextColor:kSubTextColor];
+        [infoLabel setHighlightedTextColor:kSubTextHighlightColor];
         [self addSubview:infoLabel];
         
-               
-        if (isForDetail) {
-            bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x, infoLabel.frame.origin.y + 20, titleWidth, 14)];
-            [bodyLabel setText:topic.bodyHtml];
-            bodyLabel.backgroundColor = [UIColor clearColor];
-            bodyLabel.font = [UIFont systemFontOfSize:13];
-            bodyLabel.numberOfLines = 10;
-            [bodyLabel setLineBreakMode:NSLineBreakByWordWrapping];
-            bodyLabel.textAlignment = NSTextAlignmentLeft;
-            [self addSubview:bodyLabel];
-        }
-        else {
-            badgeView = [[SSBadgeView alloc] initWithFrame:CGRectMake(self.frame.size.width - kBadgeWidth - 10, 10, kBadgeWidth, 16)];
-            badgeView.textLabel.text = [NSString stringWithFormat:@"%d",topic.repliesCount.intValue];
-            badgeView.backgroundColor = [UIColor clearColor];
-            badgeView.textLabel.font = [UIFont boldSystemFontOfSize:12.0f];
-            badgeView.cornerRadius = 8;
-            badgeView.badgeColor = kBadgeColor;
-            badgeView.badgeAlignment = SSBadgeViewAlignmentRight;
-            [self addSubview:badgeView];
-        }
+        badgeView = [[SSBadgeView alloc] initWithFrame:CGRectMake(self.frame.size.width - kBadgeWidth - 10, 10, kBadgeWidth, 16)];
+        badgeView.textLabel.text = [NSString stringWithFormat:@"%d",topic.repliesCount.intValue];
+        badgeView.backgroundColor = [UIColor clearColor];
+        badgeView.textLabel.font = [UIFont boldSystemFontOfSize:12.0f];
+        badgeView.cornerRadius = 8;
+        badgeView.badgeColor = kBadgeColor;
+        badgeView.highlightedBadgeColor = kBadgeColor;
+        badgeView.textLabel.highlightedTextColor = [UIColor whiteColor];
+        badgeView.badgeAlignment = SSBadgeViewAlignmentRight;
+        [self addSubview:badgeView];
         
     }
     return self;
 }
 
 - (void) drawRect:(CGRect)rect {
-    [kBorderTopImage drawInRect:CGRectMake(0, 0, self.frame.size.width, 1)];
-    [kBackgrounImage drawInRect:CGRectMake(0, 1, self.frame.size.width, self.frame.size.height - 2)];
-    [kBorderBottomImage drawInRect:CGRectMake(0, self.frame.size.height - 1, self.frame.size.width, 1)];
     [super drawRect:rect];
+    [kBorderTopImage drawInRect:CGRectMake(0, 0, self.frame.size.width, 1)];
+    //    [kBackgrounImage drawInRect:CGRectMake(0, 1, self.frame.size.width, self.frame.size.height - 2)];
+    [kBorderBottomImage drawInRect:CGRectMake(0, self.frame.size.height - 1, self.frame.size.width, 1)];
 }
 
 
